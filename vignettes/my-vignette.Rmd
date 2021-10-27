@@ -1,0 +1,30 @@
+---
+author: "Alisson Rosa"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(mypdf1)
+```
+# Função para ajuste de tabelas
+Essa é uma função simples que serve para criação de tabelas, pode ser chamada usando `r mypdf1::pdf1_tbl(obj,tit)`, onde `r obj` é de preferência um data.frame para ser criado a tabela, `r tit` é o titulo da tabela que **deve** ser escrito em formato de string. Um exemplo de utilização é o seguinte:
+```{r}
+mtcars %>% 
+  psych::describe() %>% 
+  .[,-c(1,6,7,10,11,13,12)] %>% 
+  dplyr::rename(Média=mean,`Desvio Padrão`=sd,Mediana=median,Minímo=min,Máximo=max) %>% 
+  round(3) %>% 
+  mypdf1::pdf1_tbl("Nome da Tabela")
+```
+

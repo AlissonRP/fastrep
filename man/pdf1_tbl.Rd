@@ -4,16 +4,15 @@
 \alias{pdf1_tbl}
 \title{pdf1_tbl}
 \usage{
-pdf1_tbl(v, tit)
+pdf1_tbl(obj, tit, ...)
 }
 \arguments{
-\item{v}{Objeto a ser printado}
+\item{obj}{Object used to create the table}
 
-\item{tit}{titulo da tabela}
-}
-\value{
-não sei
+\item{tit}{Title for the table, write in string format}
+
+\item{...}{Other arguments}
 }
 \description{
-function to print  a table
+this is a very simple table generator
 }

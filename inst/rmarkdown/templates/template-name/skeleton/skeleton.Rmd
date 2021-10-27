@@ -24,23 +24,13 @@ knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'cent
 scale_fill_discrete = \(...) scale_fill_brewer(... , palette="Set2") #Fixa a scale do fill dos gráficos do ggplot2
 
 ```
-```{r funções úteis}
- 
-```
+
 
 \section{Sessões são criadas dessa maneira}
 ```{r,}
 #Aqui vão códigos em R
 mtcars %>% 
-  psych::describe() %>% 
-  .[,-c(1,6,7,10,11,13,12)] %>% 
-  dplyr::rename(Média=mean,`Desvio Padrão`=sd,Mediana=median,Minímo=min,Máximo=max) %>% 
-  round(3) %>% 
-  mypdf1::pdf1_tbl("Nome da Tabela")
-  
-  
-  
-  
+  summary()
   
 ```
 

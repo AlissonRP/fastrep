@@ -1,0 +1,55 @@
+---
+title: "Titulo"
+author: "Author"
+abstract: "abstract"
+header-includes:
+   - \usepackage[brazil]{babel}
+   - \usepackage{bm}
+geometry: margin=2cm
+output:
+  bookdown::pdf_document2:
+editor_options:
+  chunk_output_type: console
+---
+
+
+
+```{r setup,include=F,}
+
+
+
+options(digits=3)
+options(scipen=999)
+options(OutDec=",")
+ggplot2::theme_set(theme_minimal())
+knitr::opts_chunk$set(echo=FALSE,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=7.8, fig.height=4.85)
+scale_fill_discrete = \(...) scale_fill_brewer(... , palette="Set2")
+
+```
+
+```{r dc}
+
+```
+
+
+
+
+
+
+```{r ead}
+
+```
+
+
+
+
+```{r mod}
+
+```
+
+
+
+```{r}
+
+```
+

@@ -1,7 +1,7 @@
 ---
-title: "Titulo"
-author: "Author"
-abstract: "abstract"
+title: "Aqui você coloca o título"
+author: "Aqui você coloca o autor(s)"
+abstract: "Aqui você escreve o resumo"
 header-includes:
    - \usepackage[brazil]{babel}
    - \usepackage{bm}
@@ -16,19 +16,31 @@ editor_options:
 
 ```{r setup,include=F,}
 
-
-
-options(digits=3)
+options(digits=3)  #Arrendodamento
 options(scipen=999)
 options(OutDec=",")
-ggplot2::theme_set(theme_minimal())
-knitr::opts_chunk$set(echo=FALSE,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=7.8, fig.height=4.85)
-scale_fill_discrete = \(...) scale_fill_brewer(... , palette="Set2")
+ggplot2::theme_set(theme_minimal()) #Tema dos gráficos produzidos no ggplot2
+knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=7.8, fig.height=4.85)
+scale_fill_discrete = \(...) scale_fill_brewer(... , palette="Set2") #Fixa a scale do fill dos gráficos do ggplot2
+
+```
+```{r funções úteis}
 
 ```
 
-```{r dc}
-
+\section{Sessões são criadas dessa maneira}
+```{r,}
+#Aqui vão códigos em R
+mtcars %>% 
+  psych::describe() %>% 
+  .[,-c(1,6,7,10,11,13,12)] %>% 
+  rename(Média=mean,`Desvio Padrão`=sd,Mediana=median,Minímo=min,Máximo=max) |> 
+  mypdf1::pdf1_tbl("Nome da Tabela")
+  
+  
+  
+  
+  
 ```
 
 
@@ -36,20 +48,4 @@ scale_fill_discrete = \(...) scale_fill_brewer(... , palette="Set2")
 
 
 
-```{r ead}
-
-```
-
-
-
-
-```{r mod}
-
-```
-
-
-
-```{r}
-
-```
 

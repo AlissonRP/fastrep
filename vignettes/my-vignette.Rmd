@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 library(mypdf1)
 ```
 # Função para ajuste de tabelas
-Essa é uma função simples que serve para criação de tabelas, pode ser chamada usando `r mypdf1::pdf1_tbl(obj,tit)`, onde `r obj` é de preferência um data.frame para ser criado a tabela, `r tit` é o titulo da tabela que **deve** ser escrito em formato de string. Um exemplo de utilização é o seguinte:
+Essa é uma função simples que serve para criação de tabelas, pode ser chamada usando `mypdf1::pdf1_tbl(obj,tit)`, onde `obj` é de preferência um data.frame para ser criado a tabela, `tit` é o titulo da tabela que **deve** ser escrito em formato de string. Um exemplo de utilização é o seguinte:
 ```{r}
 mtcars %>% 
   psych::describe() %>% 

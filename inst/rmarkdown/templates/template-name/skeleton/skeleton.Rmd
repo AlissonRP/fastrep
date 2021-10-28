@@ -4,7 +4,7 @@ author: "Aqui você coloca o autor(s)"
 abstract: "Aqui você escreve o resumo"
 header-includes:
    - \usepackage[brazil]{babel}
-   - \usepackage{bm,mathbb}
+   - \usepackage{bm}
 geometry: margin=2cm
 output:
   bookdown::pdf_document2:

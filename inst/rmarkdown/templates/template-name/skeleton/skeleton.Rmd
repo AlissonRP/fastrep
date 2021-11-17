@@ -18,10 +18,9 @@ editor_options:
 
 options(digits=3)  #Arrendodamento
 options(scipen=999)
-options(OutDec=",")
 ggplot2::theme_set(ggplot2::theme_minimal()) #Tema dos gráficos produzidos no ggplot2
 knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=7.8, fig.height=4.85)
-scale_fill_discrete = \(...) scale_fill_brewer(... , palette="Set2") #Fixa a scale do fill dos gráficos do ggplot2
+scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette="Set2") #Fixa a scale do fill dos gráficos do ggplot2
 
 ```
 
@@ -29,7 +28,7 @@ scale_fill_discrete = \(...) scale_fill_brewer(... , palette="Set2") #Fixa a sca
 \section{Sessões são criadas dessa maneira}
 ```{r,}
 #Aqui vão códigos em R
-mtcars %>% 
+mtcars |> 
   summary()
   
 ```

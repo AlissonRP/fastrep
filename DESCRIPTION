@@ -1,8 +1,9 @@
 Package: mypdf1
 Type: Package
 Title: Rmarkdown template
-Version: 0.1.0
+Version: 0.1.3
 Author: Alisson Rosa
+Depends: R (>= 4.1.0)
 Maintainer: The package maintainer <alirperera887@gmail.com>
 Description: Rmarkdown template for writing pdf reports using Latex syntax (PT-BR).
 License: What license is it under?

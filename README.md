@@ -1,5 +1,5 @@
 # mypdf1 (em construção)
-Sempre quando eu criava algum arquivo em Rmarkdown (principalmente para [Sigma JR](https://www.instagram.com/_sigmajr/)), existia um padrão de pacotes necessários e função que eu quase sempre eram utilizadas.  
+Sempre quando eu criava algum arquivo em Rmarkdown (principalmente para [Sigma JR](https://www.instagram.com/_sigmajr/)), existia um padrão de pacotes necessários e funções que eu quase sempre utilizava.  
 Assim esse pacote disponibiliza um template para  relatórios em pdf no Rmarkdown e funções bastantes usuais, note que é um pacote  mais *agregador* que criador. 
 
 ## Algumas funções já disponíveis

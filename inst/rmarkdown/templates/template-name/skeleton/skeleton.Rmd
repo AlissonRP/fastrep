@@ -14,7 +14,7 @@ editor_options:
 
 
 
-```{r setup,include=F,}
+```{r setup,include=F}
 
 options(digits=3)  #Arrendodamento
 options(scipen=999)
@@ -26,13 +26,30 @@ scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette="Set2") #F
 
 
 \section{Sessões são criadas dessa maneira}
-```{r,}
+```{r }
 #Aqui vão códigos em R
-mtcars |> 
+iris |> 
   summary()
   
 ```
+```{r crftable}
 
+iris |>  
+mypdf1::pdf1_freq.tbl(Species,"seila") |> 
+  mypdf1::pdf1_tbl("You can combine this function too!")
+    
+```
+Você faz referência cruzada de tabelas assim: Tabela \@ref(tab:crftable)
+
+```{r crfgraph, fig.cap = "Nome da figura"}
+iris |>   
+  dplyr::group_by(Species) |> 
+  dplyr::summarise(mean=mean(Sepal.Width)) |> 
+  ggplot2::ggplot(ggplot2::aes(Species,mean))+
+  ggplot2::geom_bar(stat='identity')
+```
+
+Você faz referência cruzada de figuras assim: Figura \@ref(fig:crfgraph)
 
 
 

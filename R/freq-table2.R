@@ -11,25 +11,36 @@
 #' @examples
 #'iris %>%
 #'mypdf1::pdf1_freq.tbl(Species,"title") %>%
-#'mypdf1::pdf1_tbl(" You can combine this function too!")
 #' @export
-pdf1_freq.tbl2=function(df,v1,v2,tit,marg){
+pdf1_freq.tbl2=function(obj,v1,v2,tit,marg){
   if(missing(marg)){
-    tab=df %>%
+    title2=obj |>  dplyr::select({{v2}}) |> names()
+    catlev=nrow(unique(obj |>
+                         dplyr::select({{v2}})))+1
+    tab=obj %>%
       dplyr::group_by({{v1}},{{v2}}) %>%
       dplyr::summarise(n=dplyr::n())   %>%
       tidyr::spread({{v2}}, n) %>%
       adorn_totals("row") %>%
       adorn_totals("col") %>%
-      dplyr::ungroup()
+      dplyr::ungroup() |>
+      mypdf1::pdf1_tbl(tit) |>
+      kableExtra::add_header_above(c(" ", setNames(catlev,title2)), align ="c")
+
 
   } else {
-    tab=df %>%
+    title2=obj |>  dplyr::select({{v2}}) |> names()
+    catlev=nrow(unique(obj |>
+                         dplyr::select({{v2}})))
+    tab=obj %>%
       dplyr::group_by({{v1}},{{v2}}) %>%
       dplyr::summarise(n=dplyr::n())   %>%
       tidyr::spread({{v2}}, n) %>%
       adorn_percentages() %>%
-      dplyr::ungroup()
+      dplyr::ungroup() |>
+      mypdf1::pdf1_tbl(tit) |>
+      kableExtra::add_header_above(c(" ", setNames(catlev,title2)), align ="c")
+
 
   }
   tab

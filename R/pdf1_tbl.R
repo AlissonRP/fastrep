@@ -28,4 +28,4 @@ pdf1_tbl=function(obj,tit,format=NULL,code=F,...){
 
   }
 }
-
+#

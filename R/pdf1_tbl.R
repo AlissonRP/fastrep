@@ -24,7 +24,7 @@ pdf1_tbl=function(obj,tit,format=NULL,code=F,...){
   } else{
     obj %>%
       knitr::kable(caption=tit,align = "c",format=format) |>
-      kableExtra::kable_styling(latex_options = "hold_position")
+      kableExtra::kable_classic(latex_options = "HOLD_position")
 
   }
 }

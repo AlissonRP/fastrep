@@ -27,15 +27,12 @@ scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette="Set2") #F
 
 
 \section{Sessões são criadas dessa maneira}
-# Ou dessa Maneira
 ```{r }
 #Aqui vão códigos em R
 iris |> 
   summary()
   
 ```
-\subsection{Subseções são cridas dessa maneira}
-## Ou dessa maneira
 ```{r crftable}
 
 iris |>  

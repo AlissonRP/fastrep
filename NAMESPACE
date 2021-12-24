@@ -2,6 +2,7 @@
 
 export("%>%")
 export(pdf1_freq.tbl)
+export(pdf1_freq.tbl2)
 export(pdf1_tbl)
 export(untabyl)
 importFrom(magrittr,"%>%")

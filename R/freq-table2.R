@@ -6,9 +6,11 @@
 #' @param obj     Object used to create the table. Data frame, list or environment
 #' (or object coercible by as.data.frame to a data frame)
 #' @param tit     Title for the table, write in string format
-#' @param v       Variable that you want the table (not written in string format)
+#' @param v1       Variable that you want the table (not written in string format)
+#' @param v2       Variable that you want the table (not written in string format)
 #' @param ...     Other arguments
 #' @param marg   Marginal row table
+
 #' @examples
 #'iris %>%
 #'mypdf1::pdf1_freq.tbl(Species,"title") %>%

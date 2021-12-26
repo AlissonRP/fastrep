@@ -8,7 +8,7 @@
 #' @param ...     Other arguments
 #' @examples
 #'airquality %>%
-#'mypdf1::pdf1_na() %>%
+#'mypdf1::pdf1_na()
 #' @export
 pdf1_na=function(obj,...){
   vec=is.na(obj) |>

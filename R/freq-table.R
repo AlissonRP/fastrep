@@ -13,8 +13,8 @@
 #'mypdf1::pdf1_freq.tbl(Species,"title") %>%
 #'mypdf1::pdf1_tbl(" You can combine this function too!")
 #' @export
-pdf1_freq.tbl=function(df,v,tit){
-  df %>%
+pdf1_freq.tbl=function(obj,v,tit){
+  obj %>%
     dplyr::count({{v}}) %>%
     dplyr::mutate(`Frequência Relativa`=prop.table(n) %>% round(3)) %>%
     dplyr::rename(`Frequência Absoluta`=n) %>%

@@ -14,6 +14,7 @@ Imports:
     dplyr,
     ggplot2,
     kableExtra,
+    purrr,
     magrittr
 Suggests: 
     testthat (>= 3.0.0)

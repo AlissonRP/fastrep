@@ -6,6 +6,10 @@ Assim esse pacote disponibiliza um template para  relatórios em pdf no Rmarkdow
 ```r
 devtools::install_github("https://github.com/AlissonRP/mypdf1")
 ```
+## Utilização do template
+```r
+rmarkdown::draft("namefile.Rmd", template = "pdf1", package = "mypdf1")
+```
 
 ## Algumas funções já disponíveis
 ### `pdf1_tbl`

@@ -12,11 +12,11 @@ pdf1_freq.tbl2(obj, v1, v2, tit, marg = F)
 
 \item{v1}{Variable that you want the table (not written in string format)}
 
-\item{v2}{Variable that you want the table (not written in string format)}
+\item{v2}{Variable that you want on the top of the table (not written in string format)}
 
 \item{tit}{Title for the table, write in string format}
 
-\item{marg}{Marginal row table}
+\item{marg}{Marginal row table, default is FALSE}
 
 \item{...}{Other arguments}
 }
@@ -24,6 +24,6 @@ pdf1_freq.tbl2(obj, v1, v2, tit, marg = F)
 this is a very simple frequency table generator
 }
 \examples{
-iris \%>\%
-mypdf1::pdf1_freq.tbl(Species,"title") \%>\%
+mtcars |>
+mypdf1::pdf1_freq.tbl2(cyl,am,"tit",marg=TRUE)
 }

@@ -21,6 +21,6 @@ this is a very simple frequency table generator
 }
 \examples{
 iris \%>\%
-mypdf1::pdf1_freq.tbl(Species,"title") \%>\%
-mypdf1::pdf1_tbl(" You can combine this function too!")
+  mypdf1::pdf1_freq.tbl(Species, "title") \%>\%
+  mypdf1::pdf1_tbl(" You can combine this function too!")
 }

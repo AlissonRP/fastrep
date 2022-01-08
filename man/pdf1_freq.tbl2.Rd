@@ -21,10 +21,11 @@ pdf1_freq.tbl2(obj, v1, v2, tit, marg = F)
 \item{...}{Other arguments}
 }
 \description{
-`r lifecycle::badge("experimental")`
-#'this is a very simple  frequency 2x2 table generator
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+
+this is a very simple  frequency 2x2 table generator
 }
 \examples{
 mtcars |>
-mypdf1::pdf1_freq.tbl2(cyl,am,"tit",marg=TRUE)
+  mypdf1::pdf1_freq.tbl2(cyl, am, "tit", marg = TRUE)
 }

@@ -1,7 +1,7 @@
 Package: mypdf1
 Type: Package
 Title: Rmarkdown template
-Version: 0.1.4
+Version: 0.2
 Author: Alisson Rosa
 Depends: R (>= 4.1.0)
 Maintainer: The package maintainer <alirperera887@gmail.com>

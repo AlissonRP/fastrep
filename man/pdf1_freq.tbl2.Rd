@@ -21,7 +21,8 @@ pdf1_freq.tbl2(obj, v1, v2, tit, marg = F)
 \item{...}{Other arguments}
 }
 \description{
-this is a very simple frequency table generator
+`r lifecycle::badge("experimental")`
+#'this is a very simple  frequency 2x2 table generator
 }
 \examples{
 mtcars |>

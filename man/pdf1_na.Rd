@@ -13,9 +13,10 @@ pdf1_na(obj, ...)
 \item{...}{Other arguments}
 }
 \description{
-this is a very simple frequency table generator
+`r lifecycle::badge("experimental")`
+this is a very simple table of the quantity of NA by variable
 }
 \examples{
 airquality \%>\%
-mypdf1::pdf1_na()
+  mypdf1::pdf1_na()
 }

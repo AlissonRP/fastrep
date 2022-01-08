@@ -13,41 +13,37 @@
 #' @param marg   Marginal row table, default is FALSE
 
 #' @examples
-#'mtcars |>
-#'mypdf1::pdf1_freq.tbl2(cyl,am,"tit",marg=TRUE)
+#' mtcars |>
+#'   mypdf1::pdf1_freq.tbl2(cyl, am, "tit", marg = TRUE)
 #' @export
-pdf1_freq.tbl2=function(obj,v1,v2,tit,marg=F){
-  #if(missing(marg)){
-    tab=obj %>%
-      dplyr::group_by({{v1}},{{v2}}) %>%
-      dplyr::summarise(n=dplyr::n())   %>%
-      tidyr::spread({{v2}}, n)
-      if(marg!=TRUE){
-        title2=obj |>  dplyr::select({{v2}}) |> names()
-        catlev=nrow(unique(obj |>
-                             dplyr::select({{v2}})))+1
-      tab=tab |>
+pdf1_freq.tbl2 <- function(obj, v1, v2, tit, marg = F) {
+  tab <- obj %>%
+    dplyr::group_by({{ v1 }}, {{ v2 }}) %>%
+    dplyr::summarise(n = dplyr::n()) %>%
+    tidyr::spread({{ v2 }}, n)
+  if (marg != TRUE) {
+    title2 <- obj |>
+      dplyr::select({{ v2 }}) |>
+      names()
+    catlev <- nrow(unique(obj |>
+      dplyr::select({{ v2 }}))) + 1
+    tab <- tab |>
       janitor::adorn_totals("row") %>%
       janitor::adorn_totals("col") %>%
       dplyr::ungroup() |>
       mypdf1::pdf1_tbl(tit) |>
-      kableExtra::add_header_above(c(" ", setNames(catlev,title2)), align ="c")
-
-
+      kableExtra::add_header_above(c(" ", setNames(catlev, title2)), align = "c")
   } else {
-    title2=obj |>  dplyr::select({{v2}}) |> names()
-    catlev=nrow(unique(obj |>
-                         dplyr::select({{v2}})))
-    tab=tab |>
+    title2 <- obj |>
+      dplyr::select({{ v2 }}) |>
+      names()
+    catlev <- nrow(unique(obj |>
+      dplyr::select({{ v2 }})))
+    tab <- tab |>
       janitor::adorn_percentages() %>%
       dplyr::ungroup() |>
       mypdf1::pdf1_tbl(tit) |>
-      kableExtra::add_header_above(c(" ", setNames(catlev,title2)), align ="c")
-
-
+      kableExtra::add_header_above(c(" ", setNames(catlev, title2)), align = "c")
   }
   tab
-
 }
-
-

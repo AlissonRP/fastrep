@@ -46,7 +46,6 @@ as_tabyl <- function(dat, axes = 2, row_var_name = NULL, col_var_name = NULL) {
 #'   tabyl(am) %>%
 #'   untabyl() %>%
 #'   attributes() # tabyl-specific attributes are gone
-
 untabyl <- function(dat) {
   if (is.list(dat) && !is.data.frame(dat)) {
     purrr::map(dat, untabyl)

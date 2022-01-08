@@ -1,7 +1,6 @@
 #' pdf1_tbl
 #'
-#'this is a very simple table generator
-#'
+#' this is a very simple table generator
 #'
 #' @param obj     Object used to create the table. Data frame, list or environment
 #' (or object coercible by as.data.frame to a data frame)
@@ -12,20 +11,27 @@
 #' Remember that by default the format is html
 #' @param ...     Other arguments
 #' @examples
-#'iris %>%
-#' dplyr::group_by(Species) %>%
-#' dplyr::summarise(mean=mean(Sepal.Length)) %>%
-#' mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
+#' iris %>%
+#'   dplyr::group_by(Species) %>%
+#'   dplyr::summarise(mean = mean(Sepal.Length)) %>%
+#'   mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
 #' @export
-pdf1_tbl=function(obj,tit,format=NULL,code=F,...){
-  if(code==T){
-  obj %>%
-    knitr::kable(caption=tit,align = "c",format=format)
-  } else{
+pdf1_tbl <- function(obj, tit, format = NULL, code = F, ...) {
+  if (code == T) {
     obj %>%
+      knitr::kable(caption = tit, align = "c", format = format)
+  } else {
+    obj %>%
+<<<<<<< HEAD
+      knitr::kable(caption = tit, align = "c", format = format) |>
+      kableExtra::kable_classic(latex_options = "HOLD_position")
+  }
+}
+=======
       knitr::kable(caption=tit,align = "c",format=format) |>
       kableExtra::kable_classic(latex_options = "HOLD_position")
 
   }
 }
 #
+>>>>>>> main

@@ -22,7 +22,16 @@ pdf1_tbl <- function(obj, tit, format = NULL, code = F, ...) {
       knitr::kable(caption = tit, align = "c", format = format)
   } else {
     obj %>%
+<<<<<<< HEAD
       knitr::kable(caption = tit, align = "c", format = format) |>
       kableExtra::kable_classic(latex_options = "HOLD_position")
   }
 }
+=======
+      knitr::kable(caption=tit,align = "c",format=format) |>
+      kableExtra::kable_classic(latex_options = "HOLD_position")
+
+  }
+}
+#
+>>>>>>> main

@@ -25,7 +25,7 @@ this is a very simple table generator
 }
 \examples{
 iris \%>\%
-  dplyr::group_by(Species) \%>\%
-  dplyr::summarise(mean = mean(Sepal.Length)) \%>\%
-  mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
+dplyr::group_by(Species) \%>\%
+dplyr::summarise(mean=mean(Sepal.Length)) \%>\%
+mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
 }

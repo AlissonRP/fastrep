@@ -2,6 +2,7 @@
 #'
 #' @description
 #' `r lifecycle::badge("experimental")`
+#'
 #' this is a very simple table of the quantity of NA by variable
 #'
 #' @param obj     Object used to create the table. Data frame, list or environment

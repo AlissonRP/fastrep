@@ -2,7 +2,9 @@
 #'
 #' @description
 #' `r lifecycle::badge("experimental")`
-#' #'this is a very simple  frequency 2x2 table generator
+#'
+#'
+#' this is a very simple  frequency 2x2 table generator
 #'
 #' @param obj     Object used to create the table. Data frame, list or environment
 #' (or object coercible by as.data.frame to a data frame)

@@ -16,9 +16,9 @@
 
 #' @examples
 #' mtcars |>
-#'   mypdf1::pdf1_freq.tbl2(cyl, am, "tit", marg = TRUE)
+#'   mypdf1::pdf1_tbl_freq2(cyl, am, "tit", marg = TRUE)
 #' @export
-pdf1_freq.tbl2 <- function(obj, v1, v2, tit, marg = F) {
+pdf1_tbl_freq2 <- function(obj, v1, v2, tit, marg = F) {
   tab <- obj %>%
     dplyr::group_by({{ v1 }}, {{ v2 }}) %>%
     dplyr::summarise(n = dplyr::n()) %>%

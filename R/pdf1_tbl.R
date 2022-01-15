@@ -17,7 +17,7 @@
 #' dplyr::summarise(mean=mean(Sepal.Length)) %>%
 #' mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
 #' @export
-pdf1_tbl=function(obj,tit,format=NULL,code=F,...){
+pdf1_tbl=function(obj,tit="",format=NULL,code=F,...){
   if(code==T){
     obj %>%
       knitr::kable(caption=tit,align = "c",format=format)

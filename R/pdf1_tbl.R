@@ -1,6 +1,6 @@
 #' pdf1_tbl
 #'
-#'this is a very simple table generator
+#' this is a very simple table generator
 #'
 #'
 #' @param obj     Object used to create the table. Data frame, list or environment
@@ -12,27 +12,23 @@
 #' @param ...     Other arguments
 #' @note The value of @param format  will be automatically determined if the function is called within a knitr document
 #' @examples
-#'iris %>%
-#' dplyr::group_by(Species) %>%
-#' dplyr::summarise(mean=mean(Sepal.Length)) %>%
-#' mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
+#' iris %>%
+#'   dplyr::group_by(Species) %>%
+#'   dplyr::summarise(mean = mean(Sepal.Length)) %>%
+#'   mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
 #'
 #' mtcars |>
-#'  dplyr::group_by(carb) |>
-#'  dplyr::summarise(sd=sd(wt)) |>
-#'  mypdf1::pdf1_tbl()
-
-
+#'   dplyr::group_by(carb) |>
+#'   dplyr::summarise(sd = sd(wt)) |>
+#'   mypdf1::pdf1_tbl()
 #' @export
-pdf1_tbl=function(obj,title="",format=NULL,code=F,...){
-  if(code==T){
+pdf1_tbl <- function(obj, title = "", format = NULL, code = F, ...) {
+  if (code == T) {
     obj %>%
-      knitr::kable(caption=title,align = "c",format=format)
-  } else{
+      knitr::kable(caption = title, align = "c", format = format)
+  } else {
     obj %>%
-      knitr::kable(caption=title,align = "c",format=format) |>
+      knitr::kable(caption = title, align = "c", format = format) |>
       kableExtra::kable_classic(latex_options = "HOLD_position")
-
   }
 }
-

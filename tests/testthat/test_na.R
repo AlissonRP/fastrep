@@ -1,4 +1,4 @@
-context("Checking total NA")
+
 library(mypdf1)
 
 test_that("sum na's", {

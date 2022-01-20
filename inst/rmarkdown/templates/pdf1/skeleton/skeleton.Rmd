@@ -5,7 +5,7 @@ abstract: "Aqui você escreve o resumo"
 header-includes:
    - \usepackage[brazil]{babel}
    - \usepackage{bm}
-geometry: left=1.7cm, right=1.7cm, top=3.33cm, bottom=3.2cm
+geometry: left=1.7cm, right=1.7cm, top=3cm, bottom=3cm
 output:
   bookdown::pdf_document2:
 editor_options:

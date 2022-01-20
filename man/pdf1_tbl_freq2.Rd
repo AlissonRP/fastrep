@@ -4,17 +4,17 @@
 \alias{pdf1_tbl_freq2}
 \title{pdf1_freq.tbl}
 \usage{
-pdf1_tbl_freq2(obj, v1, v2, tit, marg = F)
+pdf1_tbl_freq2(obj, var1, var2, title, marg = F)
 }
 \arguments{
 \item{obj}{Object used to create the table. Data frame, list or environment
 (or object coercible by as.data.frame to a data frame)}
 
-\item{v1}{Variable that you want the table (not written in string format)}
+\item{var1}{Variable that you want the table (not written in string format)}
 
-\item{v2}{Variable that you want on the top of the table (not written in string format)}
+\item{var2}{Variable that you want on the top of the table (not written in string format)}
 
-\item{tit}{Title for the table, write in string format}
+\item{title}{titlele for the table, write in string format}
 
 \item{marg}{Marginal row table, default is FALSE}
 
@@ -27,5 +27,5 @@ this is a very simple  frequency 2x2 table generator
 }
 \examples{
 mtcars |>
-  mypdf1::pdf1_tbl_freq2(cyl, am, "tit", marg = TRUE)
+  mypdf1::pdf1_tbl_freq2(cyl, am, "title", marg = TRUE)
 }

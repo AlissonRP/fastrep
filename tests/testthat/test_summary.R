@@ -16,4 +16,8 @@ test_that("sum mean", {
     iris |> mypdf1::pdf1_summary(use_num = T) |> (\(x) x[1, 2])() |> as.numeric() |> round(1),
     round(mean(iris$Sepal.Length), 1)
   )
+  expect_equal(
+    airquality |> mypdf1::pdf1_summary(na_rm=F) |> (\(x) x[1, 2])() |> as.numeric() |> round(1),
+    as.numeric(NA))
+
 })

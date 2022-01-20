@@ -4,16 +4,15 @@
 \alias{pdf1_tbl}
 \title{pdf1_tbl}
 \usage{
-pdf1_tbl(obj, tit = "", format = NULL, code = F, ...)
+pdf1_tbl(obj, title = "", format = NULL, code = F, ...)
 }
 \arguments{
 \item{obj}{Object used to create the table. Data frame, list or environment
 (or object coercible by as.data.frame to a data frame)}
 
-\item{tit}{Title for the table, write in string format}
+\item{title}{Title for the table, write in string format}
 
-\item{format}{Format of table, write in string format. Possible values are latex, html.
-The value of this argument will be automatically determined if the function is called within a knitr document.}
+\item{format}{Format of table, write in string format. Possible values are latex, html.}
 
 \item{code}{If you want the table code to appear in the console, put code=TRUE, the default is FALSE, you can combine with format.
 Remember that by default the format is html}
@@ -23,9 +22,17 @@ Remember that by default the format is html}
 \description{
 this is a very simple table generator
 }
+\note{
+The value of @param format  will be automatically determined if the function is called within a knitr document
+}
 \examples{
 iris \%>\%
-dplyr::group_by(Species) \%>\%
-dplyr::summarise(mean=mean(Sepal.Length)) \%>\%
-mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
+  dplyr::group_by(Species) \%>\%
+  dplyr::summarise(mean = mean(Sepal.Length)) \%>\%
+  mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
+
+mtcars |>
+  dplyr::group_by(carb) |>
+  dplyr::summarise(sd = sd(wt)) |>
+  mypdf1::pdf1_tbl()
 }

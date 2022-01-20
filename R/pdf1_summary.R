@@ -12,9 +12,9 @@
 #' mtcars |>
 #'   mypdf1::pdf1_summary()
 #'
-#' airquality |> pdf1_summary(na_rm = F)
+#' airquality |> mypdf1::pdf1_summary(na_rm = FALSE)
 #'
-#' iris |> mypdf1::pdf1_summary(use_num = T)
+#' iris |> mypdf1::pdf1_summary(use_num = TRUE)
 #' @export
 pdf1_summary <- function(obj, na_rm = TRUE, use_num = FALSE) {
   if (use_num == TRUE) {

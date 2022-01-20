@@ -4,13 +4,13 @@
 \alias{pdf1_tbl_freq}
 \title{pdf1_freq.tbl}
 \usage{
-pdf1_tbl_freq(obj, v)
+pdf1_tbl_freq(obj, var)
 }
 \arguments{
 \item{obj}{Object used to create the table. Data frame, list or environment
 (or object coercible by as.data.frame to a data frame)}
 
-\item{v}{Variable that you want the table (not written in string format)}
+\item{var}{Variable that you want the table (not written in string format)}
 
 \item{...}{Other arguments}
 }
@@ -19,6 +19,6 @@ this is a very simple frequency table generator
 }
 \examples{
 iris \%>\%
-  mypdf1::pdf1_tbl_freq(Species, "title") \%>\%
+  mypdf1::pdf1_tbl_freq(Species) \%>\%
   mypdf1::pdf1_tbl(" You can combine this function too!")
 }

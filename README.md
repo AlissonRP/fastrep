@@ -1,5 +1,14 @@
-# mypdf1 (em construção)
+# mypdf1 <img src='figures\mypdf1.png' align="right" height="130" /></a>
 
+[![R build
+status](https://github.com/tidyverse/dplyr/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/mypdf1/actions/workflows/check-release.yaml)
+
+
+
+
+
+
+## Overview
 Whenever I created a file in Rmarkdown (mainly for [Sigma JR](https://www.instagram.com/_sigmajr/)), there was a pattern of necessary packages and functions that I almost always used  
 So this package provides a template for pdf reports in Rmarkdown and quite usual functions, note that it is a package more *aggregator* than creator.   
 

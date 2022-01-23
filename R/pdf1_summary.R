@@ -3,10 +3,12 @@
 #' this is a very summary  generator
 #'
 #'
-#' @param obj     Object used to create the table. Data frame, list or environment
-#' (or object coercible by as.data.frame to a data frame)
-#' @param na_rm option to remove NA from variables
-#' @param use_num option to use only numeric variables
+#' @param obj     Object used to create the table.
+#'
+#' `data.frame`, `list` or environment
+#' (or object coercible by `as.data.frame` to a `data.frame`)
+#'
+#' @param na_rm option to remove `NA` from variables
 
 #' @examples
 #' mtcars |>
@@ -16,11 +18,8 @@
 #'
 #' iris |> mypdf1::pdf1_summary(use_num = TRUE)
 #' @export
-pdf1_summary <- function(obj, na_rm = TRUE, use_num = FALSE) {
-  if (use_num == TRUE) {
-    obj <- obj |>
-      dplyr::select(where(is.numeric))
-  } else if (3 > 2) {
+pdf1_summary <- function(obj, na_rm = TRUE) {
+
     char <- obj |>
       dplyr::select(where((is.character))) |> # dumb i know
       ncol()
@@ -28,11 +27,12 @@ pdf1_summary <- function(obj, na_rm = TRUE, use_num = FALSE) {
       dplyr::select(where((is.factor))) |> # dumb i know
       ncol()
     if ((char + fac) != 0) {
-      stop("Summary only for numeric variables \n use use_num=TRUE")
-    }
+      warning("string and factors variables were removed for calculations")}
+  obj <- obj |>
+    dplyr::select(where(is.numeric))
+  if( na_rm== TRUE & any(is.na(obj))){
+    warning("Your DataFrame has NA, they will be removed from calculations \n  use na_rm = FALSE if you want to keep them")
   }
-
-
 
 
   funs <- c(mean = mean, median = median, sd = sd, min = min, max = max)

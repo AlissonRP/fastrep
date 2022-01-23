@@ -4,15 +4,15 @@
 \alias{pdf1_summary}
 \title{pdf1_summary()}
 \usage{
-pdf1_summary(obj, na_rm = TRUE, use_num = FALSE)
+pdf1_summary(obj, na_rm = TRUE)
 }
 \arguments{
-\item{obj}{Object used to create the table. Data frame, list or environment
-(or object coercible by as.data.frame to a data frame)}
+\item{obj}{Object used to create the table.
 
-\item{na_rm}{option to remove NA from variables}
+\code{data.frame}, \code{list} or environment
+(or object coercible by \code{as.data.frame} to a \code{data.frame})}
 
-\item{use_num}{option to use only numeric variables}
+\item{na_rm}{option to remove \code{NA} from variables}
 }
 \description{
 this is a very summary  generator

@@ -1,4 +1,4 @@
-#' pdf1_freq.tbl
+#' pdf1_freq_tbl
 #'
 #' this is a very simple frequency table generator
 #'

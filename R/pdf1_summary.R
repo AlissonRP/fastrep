@@ -16,7 +16,7 @@
 #'
 #' airquality |> mypdf1::pdf1_summary(na_rm = FALSE)
 #'
-#' iris |> mypdf1::pdf1_summary(use_num = TRUE)
+#' iris |> mypdf1::pdf1_summary()
 #' @export
 pdf1_summary <- function(obj, na_rm = TRUE) {
 

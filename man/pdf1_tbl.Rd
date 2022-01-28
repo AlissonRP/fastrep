@@ -4,28 +4,40 @@
 \alias{pdf1_tbl}
 \title{pdf1_tbl}
 \usage{
-pdf1_tbl(obj, tit, format = NULL, code = F, ...)
+pdf1_tbl(obj, title = "", format = NULL, code = F, ...)
 }
 \arguments{
-\item{obj}{Object used to create the table. Data frame, list or environment
-(or object coercible by as.data.frame to a data frame)}
+\item{obj}{Object used to create the table.
 
-\item{tit}{Title for the table, write in string format}
+\code{data.frame}, \code{list} or environment
+(or object coercible by \code{as.data.frame} to a \code{data.frame})}
 
-\item{format}{Format of table, write in string format. Possible values are latex, html.
-The value of this argument will be automatically determined if the function is called within a knitr document.}
+\item{title}{Title for the table, write in string format}
 
-\item{code}{If you want the table code to appear in the console, put code=TRUE, the default is FALSE, you can combine with format.
-Remember that by default the format is html}
+\item{format}{Format of table, write in string format. Possible values are \code{"latex"}, "\code{html}".}
+
+\item{code}{If you want the table code to appear in the console, put \code{code=TRUE}, you can combine with \code{format}.}
 
 \item{...}{Other arguments}
 }
 \description{
 this is a very simple table generator
 }
+\note{
+Remember that by default the format is \code{"html"}
+
+The default of \code{code} is \code{FALSE}
+
+The value of  \code{format}  will be automatically determined if the function is called within a knitr document
+}
 \examples{
 iris \%>\%
-dplyr::group_by(Species) \%>\%
-dplyr::summarise(mean=mean(Sepal.Length)) \%>\%
-mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
+  dplyr::group_by(Species) \%>\%
+  dplyr::summarise(mean = mean(Sepal.Length)) \%>\%
+  mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
+
+mtcars |>
+  dplyr::group_by(carb) |>
+  dplyr::summarise(sd = sd(wt)) |>
+  mypdf1::pdf1_tbl()
 }

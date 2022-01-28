@@ -7,15 +7,17 @@
 pdf1_na(obj, ...)
 }
 \arguments{
-\item{obj}{Object used to create the table. Data frame, list or environment
-(or object coercible by as.data.frame to a data frame)}
+\item{obj}{Object used to create the table.
+
+\code{data.frame}, \code{list} or environment
+(or object coercible by \code{as.data.frame} to a \code{data.frame})}
 
 \item{...}{Other arguments}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 
-this is a very simple table of the quantity of NA by variable
+this is a very simple table of the quantity of \code{NA} by variable
 }
 \examples{
 airquality \%>\%

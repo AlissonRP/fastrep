@@ -3,10 +3,12 @@
 #' @description
 #' `r lifecycle::badge("experimental")`
 #'
-#' this is a very simple table of the quantity of NA by variable
+#' this is a very simple table of the quantity of `NA` by variable
 #'
-#' @param obj     Object used to create the table. Data frame, list or environment
-#' (or object coercible by as.data.frame to a data frame)
+#' @param obj     Object used to create the table.
+#'
+#' `data.frame`, `list` or environment
+#' (or object coercible by `as.data.frame` to a `data.frame`)
 #' @param ...     Other arguments
 #' @examples
 #' airquality %>%
@@ -16,5 +18,5 @@ pdf1_na <- function(obj, ...) {
   vec <- is.na(obj) |>
     as.data.frame() |>
     purrr::map_dbl(sum)
-  dplyr::tibble(`Variavel` = names(vec), `Total_Na` = vec %>% as.vector())
+  dplyr::tibble(`variable` = names(vec), `total_Na` = vec %>% as.vector())
 }

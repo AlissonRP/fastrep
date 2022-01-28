@@ -16,6 +16,6 @@ test_that("sum mean", {
     airquality |> mypdf1::pdf1_summary(na_rm=F) |> (\(x) x[1, 2])() |> as.numeric() |> round(1),
     as.numeric(NA))
   expect_warning(
-    airquality |> mypdf1::pdf1_summary() ,"Your DataFrame has NA, they will be removed from calculations \n  use na_rm = FALSE if you want to keep them")
+    airquality |> mypdf1::pdf1_summary() ,"Your dataframe has NA, they will be removed from calculations \n  use na_rm = FALSE if you want to keep them")
 
 })

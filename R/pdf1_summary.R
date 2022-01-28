@@ -31,7 +31,7 @@ pdf1_summary <- function(obj, na_rm = TRUE) {
   obj <- obj |>
     dplyr::select(where(is.numeric))
   if( na_rm== TRUE & any(is.na(obj))){
-    warning("Your DataFrame has NA, they will be removed from calculations \n  use na_rm = FALSE if you want to keep them")
+    warning("Your dataframe has NA, they will be removed from calculations \n  use na_rm = FALSE if you want to keep them")
   }
 
 
@@ -39,5 +39,5 @@ pdf1_summary <- function(obj, na_rm = TRUE) {
   args <- list(na.rm = na_rm)
   obj |>
     purrr::map_df(~ funs %>%
-      purrr::map(purrr::exec, .x, !!!args), .id = "var")
+      purrr::map(purrr::exec, .x, !!!args), .id = "variable")
 }

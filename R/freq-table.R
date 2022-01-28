@@ -15,8 +15,8 @@
 pdf1_tbl_freq <- function(obj, var) {
   obj %>%
     dplyr::count({{ var }}) %>%
-    dplyr::mutate(`Frequência Relativa` = prop.table(n) %>% round(3)) %>%
-    dplyr::rename(`Frequência Absoluta` = n) %>%
+    dplyr::mutate(`relative_frequency` = prop.table(n) %>% round(3)) %>%
+    dplyr::rename(`abosulute_frequency` = n) %>%
     janitor::adorn_totals("row") |>
     dplyr::tibble()
 }

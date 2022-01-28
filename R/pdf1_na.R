@@ -18,5 +18,5 @@ pdf1_na <- function(obj, ...) {
   vec <- is.na(obj) |>
     as.data.frame() |>
     purrr::map_dbl(sum)
-  dplyr::tibble(`Variavel` = names(vec), `Total_Na` = vec %>% as.vector())
+  dplyr::tibble(`variable` = names(vec), `total_Na` = vec %>% as.vector())
 }

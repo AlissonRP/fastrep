@@ -4,7 +4,7 @@
 \alias{pdf1_tbl_freq2}
 \title{pdf1_freq.tbl}
 \usage{
-pdf1_tbl_freq2(obj, var1, var2, title, marg = F)
+pdf1_tbl_freq2(obj, var1, var2, title = "", marg = F)
 }
 \arguments{
 \item{obj}{Object used to create the table. Data frame, list or environment

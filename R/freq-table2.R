@@ -19,10 +19,14 @@
 #'   mypdf1::pdf1_tbl_freq2(cyl, am, "title", marg = TRUE)
 #' @export
 pdf1_tbl_freq2 <- function(obj, var1, var2, title = '', marg = F) {
+  if(any(is.na(obj |> dplyr::select({{var1}},{{var2}}))) == TRUE){
+    warning('Your dataframe has NA, they will be removed from calculations')
+  }
   tab <- obj %>%
     dplyr::group_by({{ var1 }}, {{ var2 }}) %>%
     dplyr::summarise(n = dplyr::n()) %>%
     tidyr::spread({{ var2 }}, n)
+  tab[is.na(tab)] = 0
   if (marg != TRUE) {
     title2 <- obj |>
       dplyr::select({{ var2 }}) |>

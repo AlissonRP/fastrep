@@ -5,4 +5,8 @@ test_that("sum total", {
     mypdf1::pdf1_tbl_freq(Species) |> (\(x) x[4, 2])() |> as.numeric(), 150)
   expect_equal(iris %>%
     mypdf1::pdf1_tbl_freq(Species) |> (\(x) x[4, 3])() |> round(2) |> as.numeric(), 1)
+  expect_warning(
+    airquality |>
+      mypdf1::pdf1_tbl_freq2(Ozone, Month),'Your dataframe has NA, they will be removed from calculations'
+  )
 })

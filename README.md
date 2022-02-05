@@ -16,9 +16,14 @@ So this package provides a template for pdf reports in Rmarkdown and quite usual
 ```r
 devtools::install_github("https://github.com/AlissonRP/mypdf1")
 ```
-## Use of template
+## Use of default template
 ```r
-rmarkdown::draft("namefile.Rmd", template = "pdf1", package = "mypdf1", create_dir = FALSE)
+rmarkdown::draft("namefile.Rmd", template = "pdf1", package = "mypdf1")
+```
+## Use of paper template
+
+```r
+rmarkdown::draft("namefile.Rmd", template = "pdf1 - paper", package = "mypdf1", create_dir = FALSE)
 ```
 
 ## Some functions already available

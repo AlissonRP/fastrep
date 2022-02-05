@@ -1,7 +1,7 @@
 # mypdf1 <img src='figures\mypdf1.png' align="right" height="130" /></a>
 
 [![R build
-status](https://github.com/tidyverse/dplyr/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/mypdf1/actions/workflows/check-release.yaml)
+status](https://github.com/curso-r/scryr/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/mypdf1/actions/workflows/check-release.yaml)
 
 
 

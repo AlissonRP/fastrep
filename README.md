@@ -18,7 +18,7 @@ devtools::install_github("https://github.com/AlissonRP/mypdf1")
 ```
 ## Use of template
 ```r
-rmarkdown::draft("namefile.Rmd", template = "pdf1", package = "mypdf1")
+rmarkdown::draft("namefile.Rmd", template = "pdf1", package = "mypdf1", create_dir = FALSE)
 ```
 
 ## Some functions already available

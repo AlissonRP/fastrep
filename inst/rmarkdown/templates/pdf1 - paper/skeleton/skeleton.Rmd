@@ -11,7 +11,10 @@ output:
 editor_options:
   chunk_output_type: console
 indent: true
-
+bibliography: bib.bib 
+csl: statistics.csl
+nocite: '@*'
+link-citations: true
 ---
 
 

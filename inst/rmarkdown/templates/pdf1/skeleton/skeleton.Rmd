@@ -1,7 +1,7 @@
 ---
-title: "Aqui você coloca o título"
-author: "Aqui você coloca o autor(s)"
-abstract: "Aqui você escreve o resumo"
+title: "title"
+author: "author"
+abstract: "abstract"
 header-includes:
    - \usepackage[brazil]{babel}
    - \usepackage{bm}
@@ -47,11 +47,7 @@ mypdf1::pdf1_freq.tbl(Species,"seila") |>
 Você faz referência cruzada de tabelas assim: Tabela \@ref(tab:crftable)
 
 ```{r crfgraph, fig.cap = "Nome da figura"}
-iris |>   
-  dplyr::group_by(Species) |> 
-  dplyr::summarise(mean=mean(Sepal.Width)) |> 
-  ggplot2::ggplot(ggplot2::aes(Species,mean))+
-  ggplot2::geom_bar(stat='identity')
+plot(rnorm(500))
 ```
 
 Você faz referência cruzada de figuras assim: Figura \@ref(fig:crfgraph)

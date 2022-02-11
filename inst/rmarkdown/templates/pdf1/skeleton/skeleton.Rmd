@@ -5,6 +5,7 @@ abstract: "abstract"
 header-includes:
    - \usepackage[brazil]{babel}
    - \usepackage{bm}
+   - \usepackage{float}
 geometry: left=1.7cm, right=1.7cm, top=3cm, bottom=3cm
 output:
   bookdown::pdf_document2:
@@ -37,7 +38,7 @@ iris |>
 ```{r crftable}
 
 iris |>  
-mypdf1::pdf1_freq.tbl(Species,"seila") |> 
+mypdf1::pdf1_tbl_freq(Species,"seila") |> 
   mypdf1::pdf1_tbl("You can combine this function too!")
     
 ```

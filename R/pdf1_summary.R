@@ -1,6 +1,6 @@
 #' pdf1_summary()
 #'
-#' this is a very summary  generator
+#' this is a very simple summary  generator
 #'
 #'
 #' @param obj     Object used to create the table.

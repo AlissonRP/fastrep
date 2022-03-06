@@ -5,19 +5,24 @@ abstract: "abstract"
 header-includes:
    - \usepackage[brazil]{babel}
    - \usepackage{bm}
+   - \usepackage{float}
 geometry: left=1.7cm, right=1.7cm, top=3cm, bottom=3cm
 output:
   bookdown::pdf_document2:
+    includes:
+      before_body: beforebody.tex
 editor_options:
   chunk_output_type: console
 indent: true
+toc: True
 bibliography: bib.bib 
 csl: statistics.csl
 nocite: '@*'
 link-citations: true
 ---
 
-
+\clearpage
+\tableofcontents
 
 ```{r setup,include=F}
 
@@ -34,13 +39,13 @@ scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette="Set2") #F
 ```{r }
 #Aqui vão códigos em R
 iris |> 
-  summary()
+  mypdf1::pdf1_summary()
   
 ```
 ```{r crftable}
 
 iris |>  
-mypdf1::pdf1_freq.tbl(Species,"seila") |> 
+mypdf1::pdf1_tbl_freq(Species) |> 
   mypdf1::pdf1_tbl("You can combine this function too!")
     
 ```
@@ -54,6 +59,4 @@ Você faz referência cruzada de figuras assim: Figura \@ref(fig:crfgraph)
 
 
 # Bibliography
-
-
 

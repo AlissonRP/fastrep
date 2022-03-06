@@ -8,7 +8,7 @@
 #'
 #' @param obj     Object used to create the table. Data frame, list or environment
 #' (or object coercible by as.data.frame to a data frame)
-#' @param title     titlele for the table, write in string format
+#' @param title     title for the table, write in string format
 #' @param var1       Variable that you want the table (not written in string format)
 #' @param var2       Variable that you want on the top of the table (not written in string format)
 #' @param ...     Other arguments
@@ -22,10 +22,8 @@ pdf1_tbl_freq2 <- function(obj, var1, var2, title = '', marg = F) {
   if(any(is.na(obj |> dplyr::select({{var1}},{{var2}}))) == TRUE){
     warning('Your dataframe has NA, they will be removed from calculations')
   }
-  tab <- obj %>%
-    dplyr::group_by({{ var1 }}, {{ var2 }}) %>%
-    dplyr::summarise(n = dplyr::n()) %>%
-    tidyr::spread({{ var2 }}, n)
+  tab <- obj |>
+    tab({{ var1}}, {{var2}})
   tab[is.na(tab)] = 0
   if (marg != TRUE) {
     title2 <- obj |>
@@ -53,3 +51,7 @@ pdf1_tbl_freq2 <- function(obj, var1, var2, title = '', marg = F) {
   }
   tab
 }
+
+
+
+

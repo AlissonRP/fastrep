@@ -18,7 +18,8 @@ Imports:
     magrittr,
     stats,
     janitor,
-    lifecycle
+    lifecycle,
+    tidyr
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

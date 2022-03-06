@@ -10,3 +10,4 @@ test_that("sum total", {
       mypdf1::pdf1_tbl_freq2(Ozone, Month),'Your dataframe has NA, they will be removed from calculations'
   )
 })
+

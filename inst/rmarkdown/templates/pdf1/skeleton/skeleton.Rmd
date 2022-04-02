@@ -12,7 +12,6 @@ output:
 editor_options:
   chunk_output_type: console
 indent: true
-
 ---
 
 
@@ -22,7 +21,7 @@ indent: true
 options(digits=3)  #Arrendodamento
 options(scipen=999)
 ggplot2::theme_set(ggplot2::theme_minimal()) #Tema dos gráficos produzidos no ggplot2
-knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=7.8, fig.height=4.85)
+knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=6, fig.height=4.0)
 scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette="Set2") #Fixa a scale do fill dos gráficos do ggplot2
 
 ```

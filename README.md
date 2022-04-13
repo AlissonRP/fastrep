@@ -2,6 +2,8 @@
 
 [![R build
 status](https://github.com/tidyverse/ggplot2/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/mypdf1/actions)
+[![Codecov 
+test coverage](https://codecov.io/gh/AlissonRP/mypdf1/branch/main/graph/badge.svg)](https://app.codecov.io/gh/AlissonRP/mypdf1?branch=main)
 
 
 

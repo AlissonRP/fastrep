@@ -17,7 +17,7 @@ pdf1_na(obj, ...)
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 
-this is a very simple table of the quantity of \code{NA} by variable
+this is a very simple table generator of the quantity of \code{NA} by variable
 }
 \examples{
 airquality \%>\%

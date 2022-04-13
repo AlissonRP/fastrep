@@ -27,13 +27,13 @@
 #'   dplyr::summarise(sd = sd(wt)) |>
 #'   mypdf1::pdf1_tbl()
 #' @export
-pdf1_tbl <- function(obj, title = "", format = NULL, code = F, format.p.val = F,...) {
+pdf1_tbl <- function(obj, title = "", format = NULL, code = F,...) {
   if (code == T) {
     obj %>%
-      knitr::kable(caption = title, align = "c", format = format)
+      kableExtra::kable(caption = title, align = "c", format = format)
   } else {
     obj %>%
-      knitr::kable(caption = title, align = "c", format = format) |>
+      kableExtra::kable(caption = title, align = "c", format = format) |>
       kableExtra::kable_classic(latex_options = "HOLD_position")
   }
 }

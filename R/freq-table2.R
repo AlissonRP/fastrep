@@ -11,7 +11,6 @@
 #' @param title     title for the table, write in string format
 #' @param var1       Variable that you want the table (not written in string format)
 #' @param var2       Variable that you want on the top of the table (not written in string format)
-#' @param ...     Other arguments
 #' @param marg   Marginal row table, default is FALSE
 
 #' @examples

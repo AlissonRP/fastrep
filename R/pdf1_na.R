@@ -3,9 +3,9 @@
 #' @description
 #' `r lifecycle::badge("experimental")`
 #'
-#' this is a very simple table of the quantity of `NA` by variable
+#' this is a very simple table generator of the quantity of `NA` by variable
 #'
-#' @param obj     Object used to create the table.
+#' @param obj Object used to create the table.
 #'
 #' `data.frame`, `list` or environment
 #' (or object coercible by `as.data.frame` to a `data.frame`)

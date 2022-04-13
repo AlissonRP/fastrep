@@ -1,0 +1,4 @@
+name: pdf1-paper
+description: >
+  Rmarkdown template for writing pdf reports using Latex syntax.
+create_dir: false

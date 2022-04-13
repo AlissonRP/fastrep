@@ -14,11 +14,9 @@ pdf1_tbl_freq2(obj, var1, var2, title = "", marg = F)
 
 \item{var2}{Variable that you want on the top of the table (not written in string format)}
 
-\item{title}{titlele for the table, write in string format}
+\item{title}{title for the table, write in string format}
 
 \item{marg}{Marginal row table, default is FALSE}
-
-\item{...}{Other arguments}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}

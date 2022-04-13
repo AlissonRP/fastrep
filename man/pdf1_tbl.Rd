@@ -4,7 +4,7 @@
 \alias{pdf1_tbl}
 \title{pdf1_tbl}
 \usage{
-pdf1_tbl(obj, title = "", format = NULL, code = F, format.p.val = F, ...)
+pdf1_tbl(obj, title = "", format = NULL, code = F, ...)
 }
 \arguments{
 \item{obj}{Object used to create the table.

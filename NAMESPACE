@@ -2,7 +2,6 @@
 
 export("%>%")
 export(as_tabyl)
-export(pdf1_freq.tbl)
 export(pdf1_na)
 export(pdf1_summary)
 export(pdf1_tbl)

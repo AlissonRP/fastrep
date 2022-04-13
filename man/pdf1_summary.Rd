@@ -15,7 +15,7 @@ pdf1_summary(obj, na_rm = TRUE)
 \item{na_rm}{option to remove \code{NA} from variables}
 }
 \description{
-this is a very summary  generator
+this is a very simple summary  generator
 }
 \examples{
 mtcars |>

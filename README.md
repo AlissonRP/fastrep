@@ -1,7 +1,9 @@
-# mypdf1 <img src='figures\mypdf1.png' align="right" height="130" /></a>
+# mypdf1 <img src='man/figures/fig/mypdf1.png' align="right" height="130" /></a>
 
 [![R build
-status](https://github.com/tidyverse/dplyr/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/mypdf1/actions/workflows/check-release.yaml)
+status](https://github.com/tidyverse/ggplot2/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/mypdf1/actions)
+[![Codecov 
+test coverage](https://codecov.io/gh/AlissonRP/mypdf1/branch/main/graph/badge.svg)](https://app.codecov.io/gh/AlissonRP/mypdf1?branch=main)
 
 
 
@@ -16,9 +18,14 @@ So this package provides a template for pdf reports in Rmarkdown and quite usual
 ```r
 devtools::install_github("https://github.com/AlissonRP/mypdf1")
 ```
-## Use of template
+## Use of default template
 ```r
-rmarkdown::draft("namefile.Rmd", template = "pdf1", package = "mypdf1", create_dir = FALSE)
+rmarkdown::draft("namefile.Rmd", template = "pdf1", package = "mypdf1")
+```
+## Use of paper template
+
+```r
+rmarkdown::draft("namefile.Rmd", template = "pdf1 - paper", package = "mypdf1", create_dir = FALSE)
 ```
 
 ## Some functions already available

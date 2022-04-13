@@ -11,8 +11,6 @@ pdf1_tbl_freq(obj, var)
 (or object coercible by as.data.frame to a data frame)}
 
 \item{var}{Variable that you want the table (not written in string format)}
-
-\item{...}{Other arguments}
 }
 \description{
 this is a very simple frequency table generator

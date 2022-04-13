@@ -9,48 +9,58 @@ header-includes:
 geometry: left=1.7cm, right=1.7cm, top=3cm, bottom=3cm
 output:
   bookdown::pdf_document2:
+    includes:
+      before_body: beforebody.tex
 editor_options:
   chunk_output_type: console
 indent: true
+toc: True
+bibliography: bib.bib 
+csl: style.csl
+nocite: '@*'
+link-citations: true
 ---
 
-
+\clearpage
+\tableofcontents
 
 ```{r setup,include=F}
 
 options(digits=3)  #Arrendodamento
 options(scipen=999)
 ggplot2::theme_set(ggplot2::theme_minimal()) #Tema dos gráficos produzidos no ggplot2
-knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=6, fig.height=4.0)
+knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=7.8, fig.height=4)
 scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette="Set2") #Fixa a scale do fill dos gráficos do ggplot2
 
 ```
 
 
-\section{Sessões são criadas dessa maneira}
+\section{Section name}
 ```{r }
-#Aqui vão códigos em R
+#R code
 iris |> 
-  summary()
+  mypdf1::pdf1_summary()
   
 ```
 ```{r crftable}
 
 iris |>  
-mypdf1::pdf1_tbl_freq(Species,"seila") |> 
+mypdf1::pdf1_tbl_freq(Species) |> 
   mypdf1::pdf1_tbl("You can combine this function too!")
     
 ```
-Você faz referência cruzada de tabelas assim: Tabela \@ref(tab:crftable)
+You cross-reference tables like this: Table \@ref(tab:crftable)
 
-```{r crfgraph, fig.cap = "Nome da figura"}
+```{r crfgraph, fig.cap = "fig name"}
 plot(rnorm(500))
 ```
 
-Você faz referência cruzada de figuras assim: Figura \@ref(fig:crfgraph)
+You cross-reference figures like this: Figure \@ref(fig:crfgraph)
 
 
 # Bibliography
 
+```{r}
 
+```
 

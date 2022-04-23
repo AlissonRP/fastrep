@@ -17,13 +17,13 @@
 #' mtcars |>
 #'   mypdf1::pdf1_tbl_freq2(cyl, am, "title", marg = TRUE)
 #' @export
-pdf1_tbl_freq2 <- function(obj, var1, var2, title = '', marg = F) {
-  if(any(is.na(obj |> dplyr::select({{var1}},{{var2}}))) == TRUE){
-    warning('Your dataframe has NA, they will be removed from calculations')
+pdf1_tbl_freq2 <- function(obj, var1, var2, title = "", marg = F) {
+  if (any(is.na(obj |> dplyr::select({{ var1 }}, {{ var2 }}))) == TRUE) {
+    warning("Your dataframe has NA, they will be removed from calculations")
   }
   tab <- obj |>
-    tab({{ var1}}, {{var2}})
-  tab[is.na(tab)] = 0
+    tab({{ var1 }}, {{ var2 }})
+  tab[is.na(tab)] <- 0
   if (marg != TRUE) {
     title2 <- obj |>
       dplyr::select({{ var2 }}) |>
@@ -50,7 +50,3 @@ pdf1_tbl_freq2 <- function(obj, var1, var2, title = '', marg = F) {
   }
   tab
 }
-
-
-
-

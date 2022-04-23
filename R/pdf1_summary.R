@@ -19,18 +19,18 @@
 #' iris |> mypdf1::pdf1_summary()
 #' @export
 pdf1_summary <- function(obj, na_rm = TRUE) {
-
-    char <- obj |>
-      dplyr::select(where((is.character))) |> # dumb i know
-      ncol()
-    fac <- obj |>
-      dplyr::select(where((is.factor))) |> # dumb i know
-      ncol()
-    if ((char + fac) != 0) {
-      warning("string and factors variables were removed for calculations")}
+  char <- obj |>
+    dplyr::select(where((is.character))) |> # dumb i know
+    ncol()
+  fac <- obj |>
+    dplyr::select(where((is.factor))) |> # dumb i know
+    ncol()
+  if ((char + fac) != 0) {
+    warning("string and factors variables were removed for calculations")
+  }
   obj <- obj |>
     dplyr::select(where(is.numeric))
-  if( na_rm== TRUE & any(is.na(obj))){
+  if (na_rm == TRUE & any(is.na(obj))) {
     warning("Your dataframe has NA, they will be removed from calculations \n  use na_rm = FALSE if you want to keep them")
   }
 

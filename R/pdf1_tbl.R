@@ -15,7 +15,7 @@
 #'
 #' The default of `code` is `FALSE`
 #'
-#'The value of  `format`  will be automatically determined if the function is called within a knitr document
+#' The value of  `format`  will be automatically determined if the function is called within a knitr document
 #' @examples
 #' iris %>%
 #'   dplyr::group_by(Species) %>%
@@ -27,7 +27,7 @@
 #'   dplyr::summarise(sd = sd(wt)) |>
 #'   mypdf1::pdf1_tbl()
 #' @export
-pdf1_tbl <- function(obj, title = "", format = NULL, code = F,...) {
+pdf1_tbl <- function(obj, title = "", format = NULL, code = F, ...) {
   if (code == T) {
     obj %>%
       kableExtra::kable(caption = title, align = "c", format = format)

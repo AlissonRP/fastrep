@@ -8,7 +8,7 @@
 #' @param var       Variable that you want the table (not written in string format)
 #' @param sort_by      Variable you want to sort the `tibble`
 #' @param desc if you want decreasing order put `FALSE`
-#' @note By default the `sort_by` is in alphabetical order of `{{var}}`
+#' @note By default the `sort_by` is in alphabetical order of `{{ var }}`
 #' @examples
 #' iris %>%
 #'   mypdf1::pdf1_tbl_freq(Species) %>%

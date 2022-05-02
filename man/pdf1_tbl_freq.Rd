@@ -24,7 +24,7 @@ pdf1_tbl_freq(obj, var, sort_by = {
 this is a very simple frequency table generator
 }
 \note{
-By default the \code{sort_by} is in alphabetical order of \code{{{var}}}
+By default the \code{sort_by} is in alphabetical order of \code{{{ var }}}
 }
 \examples{
 iris \%>\%

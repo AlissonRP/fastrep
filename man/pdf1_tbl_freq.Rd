@@ -4,19 +4,30 @@
 \alias{pdf1_tbl_freq}
 \title{pdf1_freq_tbl}
 \usage{
-pdf1_tbl_freq(obj, var)
+pdf1_tbl_freq(obj, var, sort_by = {
+    {
+        var
+    }
+}, desc = F)
 }
 \arguments{
 \item{obj}{Object used to create the table. Data frame, list or environment
 (or object coercible by as.data.frame to a data frame)}
 
 \item{var}{Variable that you want the table (not written in string format)}
+
+\item{sort_by}{Variable you want to sort the \code{tibble}}
+
+\item{desc}{if you want decreasing order put \code{FALSE}}
 }
 \description{
 this is a very simple frequency table generator
 }
+\note{
+By default the \code{sort_by} is in alphabetical order of \code{{{ var }}}
+}
 \examples{
 iris \%>\%
   mypdf1::pdf1_tbl_freq(Species) \%>\%
-  mypdf1::pdf1_tbl(" You can combine this function too!")
+  mypdf1::pdf1_tbl("You can combine this function too!")
 }

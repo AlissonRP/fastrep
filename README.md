@@ -14,7 +14,7 @@ test coverage](https://codecov.io/gh/AlissonRP/mypdf1/branch/main/graph/badge.sv
 Whenever I created a file in Rmarkdown, there was a pattern of necessary packages and functions that I almost always used.  
 So this package provides a template for pdf reports in Rmarkdown and quite usual functions, note that it is a package more *aggregator* than creator.   
 
-## Instalation
+## Installation
 ```r
 devtools::install_github("https://github.com/AlissonRP/mypdf1")
 

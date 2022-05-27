@@ -18,10 +18,10 @@ knitr::opts_chunk$set(
 
 ```
 # Overview
-The objective of this package is to facilitate to produce reports using Rmarkdown, so the  functions are of   that type that you "you always have to use, but you always have to create"
+The objective of this package is to facilitate producing reports using Rmarkdown, so the functions are of that type that you "you always have to use, but you always have to create".
 
 ## The core function : `pdf1_tbl`
-This is the main  function of `mypdf1`, with her you can make tables in `HTML` or `latex` format, the main idea is to provide minimal parameters to create their own table, so you just need to provide a `data.frame` 
+This is the main function of `mypdf1`, with her you can make tables in `HTML` or `latex` format, the main idea is to provide minimal parameters to create their own table, so you just need to provide a `data.frame`. 
 
 ```{r}
 df = Orange |> 
@@ -38,7 +38,7 @@ As you can see the only parameters is `df`, you can put  a title in the table us
 df |> 
   mypdf1::pdf1_tbl(title = "My Title!")
 ```
-The value of format will be automatically determined if the function is called within a knitr document, but in your section the default format is `html`, if you want to change just use the argument `format` which the possibles values are `html` or `latex`. If you want the code that generate the table you can use the argument  `code` 
+The value of format will be automatically determined if the function is called within a knitr document, but in your section, the default format is `html`, if you want to change just use the argument `format` which the possibles values are `html` or `latex`. If you want the code that generates the table you can use the argument `code`. 
 ```{r}
 df |> 
   mypdf1::pdf1_tbl(title = "My Title!", code = T, format = "latex")
@@ -52,7 +52,7 @@ This function creates a frequency table, you only need to supply a `data.frame` 
 infert |> 
   mypdf1::pdf1_tbl_freq(education)
 ```
-If you want to generate a table using the output, just combine with `pdf1_tbl`
+If you want to generate a table using the output, just combine it with `pdf1_tbl`
 
 
 ```{r}
@@ -60,9 +60,22 @@ infert |>
   mypdf1::pdf1_tbl_freq(education) |> 
   mypdf1::pdf1_tbl()
 ```
+You can order the output using `sort_by`, which has two options: `absolute_frequency` and `relative_frequency`.
+
+```{r}
+chickwts |> 
+  mypdf1::pdf1_tbl_freq(feed, sort_by = absolute_frequency)
+```
+And if you want decreasing order put `desc = T`
+```{r}
+chickwts |> 
+  mypdf1::pdf1_tbl_freq(feed, desc = T, sort_by = relative_frequency)
+```
+
+
 
 ## `pdf1_freq_tbl2`
-This function make cross tables, like all function from `mypdf1` you need to supply a `data.frame`, and is this case two variables.
+This function makes cross tables, like all functions from `mypdf1` you need to supply a `data.frame`, and in this case two variables.
 ```{r}
 infert |> 
   mypdf1::pdf1_tbl_freq2(education, spontaneous)
@@ -74,7 +87,7 @@ infert |>
   mypdf1::pdf1_tbl_freq2(education, spontaneous, marg = T)
 ```
 ## `pdf1_na`
-This function count the number os `NA` by variable in your `data.frame`
+This function counts the number of `NA` by variable in your `data.frame`
 
 ```{r}
 x = c(1,2,NA,NA,NA)
@@ -86,7 +99,7 @@ data.frame(x,y) |>
 
 
 ## `pdf1_summary`
-In the base R we have the function `summary`, but the output is no by default  a `data.frame`, so `pdf1_summary` is a rewrite.
+In the base R we have the function `summary`, but the output is no by default a `data.frame`, so `pdf1_summary` is a rewrite.
 
 ```{r}
 mtcars |> 

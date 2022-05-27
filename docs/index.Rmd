@@ -1,0 +1,122 @@
+---
+title: "Introduction to mypdf1"
+header-includes:
+   - \usepackage[brazil]{babel}
+   - \usepackage[background]
+geometry: margin=2cm
+output: 
+  bookdown::html_document2:
+     toc: true
+     toc_float: true
+     number_sections: false
+     theme: flatly
+     highlight: pygments
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+
+```
+# Overview
+The objective of this package is to facilitate producing reports using Rmarkdown, so the functions are of that type that you "you always have to use, but you always have to create".
+
+## The core function : `pdf1_tbl`
+This is the main function of `mypdf1`, with her you can make tables in `HTML` or `latex` format, the main idea is to provide minimal parameters to create their own table, so you just need to provide a `data.frame`. 
+
+```{r}
+df = Orange |> 
+  dplyr::group_by(Tree) |> 
+  dplyr::count() 
+  
+  
+mypdf1::pdf1_tbl(df)
+```
+As you can see the only parameters is `df`, you can put  a title in the table using
+`title`
+
+```{r}
+df |> 
+  mypdf1::pdf1_tbl(title = "My Title!")
+```
+The value of format will be automatically determined if the function is called within a knitr document, but in your section, the default format is `html`, if you want to change just use the argument `format` which the possibles values are `html` or `latex`. If you want the code that generates the table you can use the argument `code`. 
+```{r}
+df |> 
+  mypdf1::pdf1_tbl(title = "My Title!", code = T, format = "latex")
+```
+
+
+## `pdf1_freq_tbl`
+This function creates a frequency table, you only need to supply a `data.frame` and the variable to make the table.
+
+```{r}
+infert |> 
+  mypdf1::pdf1_tbl_freq(education)
+```
+If you want to generate a table using the output, just combine it with `pdf1_tbl`
+
+
+```{r}
+infert |> 
+  mypdf1::pdf1_tbl_freq(education) |> 
+  mypdf1::pdf1_tbl()
+```
+You can order the output using `sort_by`, which has two options: `absolute_frequency` and `relative_frequency`.
+
+```{r}
+chickwts |> 
+  mypdf1::pdf1_tbl_freq(feed, sort_by = absolute_frequency)
+```
+And if you want decreasing order put `desc = T`
+```{r}
+chickwts |> 
+  mypdf1::pdf1_tbl_freq(feed, desc = T, sort_by = relative_frequency)
+```
+
+
+
+## `pdf1_freq_tbl2`
+This function makes cross tables, like all functions from `mypdf1` you need to supply a `data.frame`, and in this case two variables.
+```{r}
+infert |> 
+  mypdf1::pdf1_tbl_freq2(education, spontaneous)
+```
+The second variable (`var2`) is on the top of the table, if you want the marginal row table use `marg = TRUE`.
+
+```{r}
+infert |> 
+  mypdf1::pdf1_tbl_freq2(education, spontaneous, marg = T)
+```
+## `pdf1_na`
+This function counts the number of `NA` by variable in your `data.frame`
+
+```{r}
+x = c(1,2,NA,NA,NA)
+y = c(NA,1:4)
+
+data.frame(x,y) |> 
+  mypdf1::pdf1_na()
+```
+
+
+## `pdf1_summary`
+In the base R we have the function `summary`, but the output is no by default a `data.frame`, so `pdf1_summary` is a rewrite.
+
+```{r}
+mtcars |> 
+  mypdf1::pdf1_summary()
+```
+
+As you've probably noticed, the output is a `tibble`, so you can combine with `pdf1_tbl`
+
+```{r}
+mtcars |> 
+  mypdf1::pdf1_summary() |> 
+  mypdf1::pdf1_tbl("Summary of mtcars")
+```
+

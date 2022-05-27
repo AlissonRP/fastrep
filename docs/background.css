@@ -1,0 +1,16 @@
+div.main-container {
+  max-width: 2000px !important;
+}
+
+
+
+
+
+
+
+#TOC {
+  background: url("https://uc-r.github.io/Intro-R/images/dplyr.png");
+  background-size: contain;
+  padding-top: 120px !important;
+  background-repeat: no-repeat;
+}

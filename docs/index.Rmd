@@ -40,7 +40,7 @@ devtools::install_github("https://github.com/AlissonRP/mypdf1")
 The objective of this package is to facilitate producing reports using Rmarkdown, so the functions are of that type that you "you always have to use, but you always have to create".
 
 ## The core function : `pdf1_tbl`
-This is the primary function of `mypdf1`, with her you can make tables in `HTML` or `LaTeX` format, the main idea is to provide minimal parameters to create their own table, so you just need to provide a `data.frame`.
+This is the primary function of [mypdf1](https://github.com/AlissonRP/mypdf1), with her you can make tables in `HTML` or `LaTeX` format, the main idea is to provide minimal parameters to create their own table, so you just need to provide a `data.frame`.
 
 ```{r}
 df = Orange |> 

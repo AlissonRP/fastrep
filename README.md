@@ -17,6 +17,9 @@ So this package provides a template for pdf reports in Rmarkdown and quite usual
 ## Instalation
 ```r
 devtools::install_github("https://github.com/AlissonRP/mypdf1")
+#or
+
+remotes::install_github("https://github.com/AlissonRP/mypdf1")
 ```
 ### Recommendation
 To generate a pdf in Rmarkdown is recommended to use [`tinytex`](https://cran.r-project.org/web/packages/tinytex/index.html). If you don't have, use:

@@ -19,6 +19,7 @@
 #' iris |> mypdf1::pdf1_summary()
 #' @export
 pdf1_summary <- function(obj, na_rm = TRUE) {
+  options(digits = 3)
   char <- obj |>
     dplyr::select(where((is.character))) |> # dumb i know
     ncol()

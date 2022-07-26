@@ -1,9 +1,11 @@
 #' pdf1_na
 #'
-#' @description
-#' `r lifecycle::badge("experimental")`
 #'
-#' this is a very simple table generator of the quantity of `NA` by variable
+#'
+#' @description
+#' `r lifecycle::badge("deprecated")`
+#'
+#'This function counts the number of NA by variable in your data.frame
 #'
 #' @param obj Object used to create the table.
 #'
@@ -15,8 +17,12 @@
 #'   mypdf1::pdf1_na()
 #' @export
 pdf1_na <- function(obj, ...) {
+  lifecycle::deprecate_soft(
+    when = "0.6",
+    what = "pdf1_na()",
+    details = "Use pdf1_summary instead")
   vec <- is.na(obj) |>
     as.data.frame() |>
     purrr::map_dbl(sum)
-  dplyr::tibble(`variable` = names(vec), `total_NA` = vec %>% as.vector())
+  dplyr::tibble(`variable` = names(vec), `na_count` = vec %>% as.vector())
 }

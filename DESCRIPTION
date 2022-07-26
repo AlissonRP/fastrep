@@ -1,11 +1,11 @@
 Package: mypdf1
 Type: Package
-Title: Rmarkdown template
-Version: 0.2
+Title: mypdf1
+Version: 0.6
 Author: Alisson Rosa
 Depends: R (>= 4.1.0)
 Maintainer: The package maintainer <alirperera887@gmail.com>
-Description: Rmarkdown template for writing pdf reports using Latex syntax (PT-BR).
+Description: Time-saving package for creating pdf reports in Rmarkdown 
 License: GPL
 Encoding: UTF-8
 LazyData: true
@@ -19,7 +19,8 @@ Imports:
     stats,
     janitor,
     lifecycle,
-    tidyr
+    tidyr,
+    tidyselect
 Suggests: 
     covr,
     knitr,

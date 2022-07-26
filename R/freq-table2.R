@@ -4,7 +4,8 @@
 #' `r lifecycle::badge("experimental")`
 #'
 #'
-#' this is a very simple  frequency 2x2 table generator
+#' This function makes cross tables, like all functions from mypdf1
+#' you need to supply a data.frame, and in this case two variables.
 #'
 #' @param obj     Object used to create the table. Data frame, list or environment
 #' (or object coercible by as.data.frame to a data frame)

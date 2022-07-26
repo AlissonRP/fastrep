@@ -16,40 +16,41 @@ indent: true
 
 
 
-```{r setup,include=F}
+```{r setup, include=F}
 
-options(digits=3)  #Arrendodamento
-options(scipen=999)
-ggplot2::theme_set(ggplot2::theme_minimal()) #Tema dos gráficos produzidos no ggplot2
-knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=6, fig.height=4.0)
-scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette="Set2") #Fixa a scale do fill dos gráficos do ggplot2
+options(digits = 3)  
+options(scipen = 999)
+ggplot2::theme_set(ggplot2::theme_minimal()) 
+knitr::opts_chunk$set(echo=F, message=F, warning=F, fig.pos = 'H', 
+                      fig.align = 'center', fig.width = 6, fig.height= 3.5)
+scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette = "Set2") 
 
 ```
 
 
-\section{Sessões são criadas dessa maneira}
+\section{Section name}
 ```{r }
-#Aqui vão códigos em R
+# R code 
 iris |> 
-  summary()
+  mypdf1::pdf1_summary()
   
 ```
 ```{r crftable}
 
 iris |>  
-mypdf1::pdf1_tbl_freq(Species,"seila") |> 
+mypdf1::pdf1_tbl_freq(Species) |> 
   mypdf1::pdf1_tbl("You can combine this function too!")
     
 ```
-Você faz referência cruzada de tabelas assim: Tabela \@ref(tab:crftable)
+You cross-reference tables like this: Table \@ref(tab:crftable)
 
-```{r crfgraph, fig.cap = "Nome da figura"}
+```{r crfgraph, fig.cap = "Fig name"}
 plot(rnorm(500))
 ```
 
-Você faz referência cruzada de figuras assim: Figura \@ref(fig:crfgraph)
+You cross-reference figures like this: Figure \@ref(fig:crfgraph)
 
-
+You can use `#` to create a section too, like this:
 # Bibliography
 
 

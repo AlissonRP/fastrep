@@ -19,9 +19,9 @@ So this package provides a template for pdf reports in Rmarkdown and quite usual
 ## Installation
 ```r
 devtools::install_github("https://github.com/AlissonRP/mypdf1")
+```
 
-#or
-
+```r
 remotes::install_github("https://github.com/AlissonRP/mypdf1")
 ```
 ### Recommendation

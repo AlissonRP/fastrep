@@ -17,6 +17,7 @@ test_that("sum mean", {
     as.numeric(NA)
   )
   expect_warning(
-    airquality |> mypdf1::pdf1_summary(), "Your dataframe has NA, they will be removed from calculations \n  use na_rm = FALSE if you want to keep them"
+    airquality |> mypdf1::pdf1_summary(), "Your dataframe has NA, they will be removed from calculations \n
+  use na_rm = FALSE if you want to keep them"
   )
 })

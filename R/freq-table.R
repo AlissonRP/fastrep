@@ -1,6 +1,7 @@
 #' pdf1_freq_tbl
 #'
-#' this is a very simple frequency table generator
+#' This function creates a frequency table, you only need to supply a
+#' data.frame and the variable to make the table.
 #'
 #'
 #' @param obj     Object used to create the table. Data frame, list or environment
@@ -14,10 +15,7 @@
 #'   mypdf1::pdf1_tbl_freq(Species) %>%
 #'   mypdf1::pdf1_tbl("You can combine this function too!")
 #' @export
-pdf1_tbl_freq <- function(obj,
-                          var,
-                          sort_by = {{ var }},
-                          desc = F)
+pdf1_tbl_freq <- function(obj,var, sort_by = {{ var }}, desc = F)
 {
   non_order <- obj %>%
     dplyr::count({{ var }}) %>%

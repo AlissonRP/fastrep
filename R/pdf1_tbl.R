@@ -1,6 +1,8 @@
 #' pdf1_tbl
 #'
-#' this is a very simple table generator
+#' This is the primary function of mypdf1, with her you can make tables in HTML or LaTeX format,
+#' the main idea is to provide minimal parameters to create their own table,
+#' so you just need to provide a data.frame
 #'
 #'
 #' @param obj     Object used to create the table.

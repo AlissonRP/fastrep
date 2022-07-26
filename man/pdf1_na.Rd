@@ -15,9 +15,9 @@ pdf1_na(obj, ...)
 \item{...}{Other arguments}
 }
 \description{
-\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 
-this is a very simple table generator of the quantity of \code{NA} by variable
+This function counts the number of NA by variable in your data.frame
 }
 \examples{
 airquality \%>\%

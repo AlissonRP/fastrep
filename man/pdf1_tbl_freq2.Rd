@@ -21,7 +21,8 @@ pdf1_tbl_freq2(obj, var1, var2, title = "", marg = F)
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 
-this is a very simple  frequency 2x2 table generator
+This function makes cross tables, like all functions from mypdf1
+you need to supply a data.frame, and in this case two variables.
 }
 \examples{
 mtcars |>

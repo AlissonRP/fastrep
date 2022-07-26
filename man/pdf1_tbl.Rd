@@ -21,7 +21,9 @@ pdf1_tbl(obj, title = "", format = NULL, code = F, ...)
 \item{...}{Other arguments}
 }
 \description{
-this is a very simple table generator
+This is the primary function of mypdf1, with her you can make tables in HTML or LaTeX format,
+the main idea is to provide minimal parameters to create their own table,
+so you just need to provide a data.frame
 }
 \note{
 Remember that by default the format is \code{"html"}

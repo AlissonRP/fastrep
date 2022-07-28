@@ -20,10 +20,13 @@ pdf1_tbl(obj, title = "", format = NULL, code = F, ...)
 
 \item{...}{Other arguments}
 }
+\value{
+Your object of input in the format of a knitr_kable
+}
 \description{
 This is the primary function of mypdf1, with her you can make tables in HTML or LaTeX format,
 the main idea is to provide minimal parameters to create their own table,
-so you just need to provide a data.frame
+so you necessarily only need to provide a data.frame
 }
 \note{
 Remember that by default the format is \code{"html"}
@@ -42,4 +45,5 @@ mtcars |>
   dplyr::group_by(carb) |>
   dplyr::summarise(sd = sd(wt)) |>
   mypdf1::pdf1_tbl()
+
 }

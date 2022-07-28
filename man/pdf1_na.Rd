@@ -14,6 +14,9 @@ pdf1_na(obj, ...)
 
 \item{...}{Other arguments}
 }
+\value{
+A tibble with n rows where n is equal to \code{ncol(obj)} and 2 columns
+}
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 

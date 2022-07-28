@@ -25,6 +25,9 @@ pdf1_tbl_freq(
 
 \item{desc}{if you want decreasing order put \code{FALSE}}
 }
+\value{
+A tibble with 4 rows and 3 columns
+}
 \description{
 This function creates a frequency table, you only need to supply a
 data.frame and the variable to make the table.
@@ -36,4 +39,5 @@ By default the \code{sort_by} is in alphabetical order of \code{{{ var }}}
 iris \%>\%
   mypdf1::pdf1_tbl_freq(Species) \%>\%
   mypdf1::pdf1_tbl("You can combine this function too!")
+
 }

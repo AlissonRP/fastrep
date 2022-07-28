@@ -1,7 +1,7 @@
 #' pdf1_summary()
 #'
 #' In the base R we have the function summary, but the output is no by default
-#' a data.frame, so pdf1_summary is a rewrite
+#' a `data.frame`, so `pdf1_summary` is an enhancement of this function
 #'
 #'
 #' @param obj     Object used to create the table.
@@ -18,6 +18,11 @@
 #' airquality |> mypdf1::pdf1_summary(na_rm = FALSE)
 #'
 #' iris |> mypdf1::pdf1_summary()
+#'
+#' @return A tibble with n rows where n is equal to `ncol(obj)` and  columns
+#' with
+#' the summary metrics
+#'
 #' @export
 pdf1_summary <- function(obj, na_rm = TRUE) {
   not_numeric = obj |>

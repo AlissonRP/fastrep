@@ -2,7 +2,7 @@
 #'
 #' This is the primary function of mypdf1, with her you can make tables in HTML or LaTeX format,
 #' the main idea is to provide minimal parameters to create their own table,
-#' so you just need to provide a data.frame
+#' so you necessarily only need to provide a data.frame
 #'
 #'
 #' @param obj     Object used to create the table.
@@ -28,6 +28,8 @@
 #'   dplyr::group_by(carb) |>
 #'   dplyr::summarise(sd = sd(wt)) |>
 #'   mypdf1::pdf1_tbl()
+#'
+#' @return Your object of input in the format of a knitr_kable
 #' @export
 pdf1_tbl <- function(obj, title = "", format = NULL, code = F, ...) {
   if (code == T) {

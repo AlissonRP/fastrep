@@ -4,7 +4,15 @@
 \alias{pdf1_tbl}
 \title{pdf1_tbl}
 \usage{
-pdf1_tbl(obj, title = "", format = NULL, code = F, ...)
+pdf1_tbl(
+  obj,
+  title = "",
+  format = NULL,
+  code = F,
+  tabs = F,
+  full_page = T,
+  ...
+)
 }
 \arguments{
 \item{obj}{Object used to create the table.
@@ -17,6 +25,10 @@ pdf1_tbl(obj, title = "", format = NULL, code = F, ...)
 \item{format}{Format of table, write in string format. Possible values are \code{"latex"}, "\code{html}".}
 
 \item{code}{If you want the table code to appear in the console, put \code{code=TRUE}, you can combine with \code{format}.}
+
+\item{tabs}{If you want row separator inside table, put \code{tabs=TRUE}.}
+
+\item{full_page}{If you want the table not to take up the full width of the page, put \code{full_page=FALSE}.}
 
 \item{...}{Other arguments}
 }
@@ -32,6 +44,8 @@ so you necessarily only need to provide a data.frame
 Remember that by default the format is \code{"html"}
 
 The default of \code{code} is \code{FALSE}
+The default of \code{tabs} is \code{FALSE}
+The default of \code{full_page} is \code{TRUE}
 
 The value of  \code{format}  will be automatically determined if the function is called within a knitr document
 }

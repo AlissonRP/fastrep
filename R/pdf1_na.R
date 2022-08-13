@@ -5,7 +5,7 @@
 #' @description
 #' `r lifecycle::badge("deprecated")`
 #'
-#'This function counts the number of NA by variable in your data.frame
+#' This function counts the number of NA by variable in your data.frame
 #'
 #' @param obj Object used to create the table.
 #'
@@ -22,7 +22,8 @@ pdf1_na <- function(obj, ...) {
   lifecycle::deprecate_soft(
     when = "0.6",
     what = "pdf1_na()",
-    details = "Use pdf1_summary instead")
+    details = "Use pdf1_summary instead"
+  )
   vec <- is.na(obj) |>
     as.data.frame() |>
     purrr::map_dbl(sum)

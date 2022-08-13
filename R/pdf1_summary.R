@@ -25,8 +25,9 @@
 #'
 #' @export
 pdf1_summary <- function(obj, na_rm = TRUE) {
-  not_numeric = obj |>
-    dplyr::select(where(purrr::negate(is.numeric))) |> ncol()
+  not_numeric <- obj |>
+    dplyr::select(where(purrr::negate(is.numeric))) |>
+    ncol()
   if ((not_numeric) != 0) {
     warning("string and factors variables were removed for calculations")
   }
@@ -40,13 +41,14 @@ pdf1_summary <- function(obj, na_rm = TRUE) {
 
   funs <- c(mean = mean, median = median, sd = sd, min = min, max = max)
   args <- list(na.rm = na_rm)
-  results = obj |>
+  results <- obj |>
     purrr::map_df(~ funs %>%
       purrr::map(purrr::exec, .x, !!!args), .id = "variable")
 
-    results |> dplyr::select(where(purrr::negate(is.numeric))) |>
+  results |>
+    dplyr::select(where(purrr::negate(is.numeric))) |>
     dplyr::bind_cols(results |>
-    dplyr::select(where(is.numeric)) |>
-    purrr::map_df(round, 3)) |>
+      dplyr::select(where(is.numeric)) |>
+      purrr::map_df(round, 3)) |>
     dplyr::bind_cols(pdf1_na(obj) |> dplyr::select(where(is.numeric)))
 }

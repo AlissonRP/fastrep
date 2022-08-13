@@ -12,10 +12,14 @@
 #' @param title     Title for the table, write in string format
 #' @param format  Format of table, write in string format. Possible values are `"latex"`, "`html`".
 #' @param code  If you want the table code to appear in the console, put `code=TRUE`, you can combine with `format`.
+#' @param tabs  If you want row separator inside table, put `tabs=FALSE`.
+#' @param full_page  If you want the table not to take up the full width of the page, put `full_page=FALSE`.
 #' @param ...     Other arguments
 #' @note Remember that by default the format is `"html"`
 #'
 #' The default of `code` is `FALSE`
+#' The default of `tabs` is `TRUE`
+#' The default of `full_page` is `TRUE`
 #'
 #' The value of  `format`  will be automatically determined if the function is called within a knitr document
 #' @examples
@@ -31,13 +35,16 @@
 #'
 #' @return Your object of input in the format of a knitr_kable
 #' @export
-pdf1_tbl <- function(obj, title = "", format = NULL, code = F, ...) {
+pdf1_tbl <- function(obj, title = "", format = NULL, code = F, tabs = F,
+                     full_page = T, ...) {
   if (code == T) {
     obj %>%
-      kableExtra::kable(caption = title, align = "c", format = format)
+      kableExtra::kable(caption = title, align = "c", format = format,
+                        booktabs = !tabs)
   } else {
     obj %>%
-      kableExtra::kable(caption = title, align = "c", format = format) |>
-      kableExtra::kable_classic(latex_options = "HOLD_position")
+      kableExtra::kable(caption = title, align = "c", format = format,
+                        booktabs = !tabs) |>
+      kableExtra::kable_classic(latex_options = "HOLD_position", full_width = full_page, ...)
   }
 }

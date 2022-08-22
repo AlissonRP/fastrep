@@ -25,7 +25,7 @@ devtools::install_github("https://github.com/AlissonRP/mypdf1")
 remotes::install_github("https://github.com/AlissonRP/mypdf1")
 ```
 ### Recommendation
-To generate a pdf in Rmarkdown is recommended to use [`tinytex`](https://cran.r-project.org/web/packages/tinytex/index.html). If you don't have, use:
+To generate a pdf in Rmarkdown is recommended to use [`tinytex`](https://cran.r-project.org/package=tinytex). If you don't have, use:
 
 ```r
 tinytex::install_tinytex()

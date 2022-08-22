@@ -12,10 +12,14 @@
 #' @note By default the `sort_by` is in alphabetical order of `{{ var }}`
 #' @examples
 #' iris %>%
-#'   mypdf1::pdf1_tbl_freq(Species) %>%
+#'   mypdf1::pdf1_freq_tbl(Species) %>%
 #'   mypdf1::pdf1_tbl("You can combine this function too!")
+#'
+#' @return A tibble with 4 rows and 3 columns
+#'
 #' @export
-pdf1_tbl_freq <- function(obj,var, sort_by = {{ var }}, desc = F)
+pdf1_freq_tbl <- function(obj, var,
+                          sort_by = {{ var }}, desc = F)
 {
   non_order <- obj %>%
     dplyr::count({{ var }}) %>%

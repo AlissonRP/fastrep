@@ -50,41 +50,41 @@ This function creates a frequency table, you only need to supply a `data.frame` 
 
 ```{r}
 infert |> 
-  mypdf1::pdf1_tbl_freq(education)
+  mypdf1::pdf1_freq_tbl(education)
 ```
 If you want to generate a table using the output, just combine it with `pdf1_tbl`
 
 
 ```{r}
 infert |> 
-  mypdf1::pdf1_tbl_freq(education) |> 
+  mypdf1::pdf1_freq_tbl(education) |> 
   mypdf1::pdf1_tbl()
 ```
 You can order the output using `sort_by`, which has two options: `absolute_frequency` and `relative_frequency`.
 
 ```{r}
 chickwts |> 
-  mypdf1::pdf1_tbl_freq(feed, sort_by = absolute_frequency)
+  mypdf1::pdf1_freq_tbl(feed, sort_by = absolute_frequency)
 ```
 And if you want decreasing order put `desc = T`
 ```{r}
 chickwts |> 
-  mypdf1::pdf1_tbl_freq(feed, desc = T, sort_by = relative_frequency)
+  mypdf1::pdf1_freq_tbl(feed, desc = T, sort_by = relative_frequency)
 ```
 
 
 
-## `pdf1_freq_tbl2`
+## `pdf1_cross_tbl`
 This function makes cross tables, like all functions from `mypdf1` you need to supply a `data.frame`, and in this case two variables.
 ```{r}
 infert |> 
-  mypdf1::pdf1_tbl_freq2(education, spontaneous)
+  mypdf1::pdf1_cross_tbl(education, spontaneous)
 ```
 The second variable (`var2`) is on the top of the table, if you want the marginal row table use `marg = TRUE`.
 
 ```{r}
 infert |> 
-  mypdf1::pdf1_tbl_freq2(education, spontaneous, marg = T)
+  mypdf1::pdf1_cross_tbl(education, spontaneous, marg = T)
 ```
 ## `pdf1_na`
 This function counts the number of `NA` by variable in your `data.frame`
@@ -94,7 +94,7 @@ x = c(1,2,NA,NA,NA)
 y = c(NA,1:4)
 
 data.frame(x,y) |> 
-  mypdf1::pdf1_na()
+  mypdf1:::pdf1_na()
 ```
 
 

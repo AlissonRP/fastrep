@@ -14,9 +14,15 @@ pdf1_summary(obj, na_rm = TRUE)
 
 \item{na_rm}{option to remove \code{NA} from variables}
 }
+\value{
+A tibble with n rows where n is equal to \code{ncol(obj)} and  columns
+with
+the summary metrics
+}
 \description{
 In the base R we have the function summary, but the output is no by default
-a data.frame, so pdf1_summary is a rewrite
+a \code{data.frame}, so \code{pdf1_summary} is an enhancement of this function
+to summarize data frames.
 }
 \examples{
 mtcars |>
@@ -25,4 +31,5 @@ mtcars |>
 airquality |> mypdf1::pdf1_summary(na_rm = FALSE)
 
 iris |> mypdf1::pdf1_summary()
+
 }

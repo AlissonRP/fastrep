@@ -16,7 +16,6 @@ Imports:
     lifecycle,
     magrittr,
     purrr,
-    stats,
     tidyr
 Suggests: 
     covr,

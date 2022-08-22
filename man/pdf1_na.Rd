@@ -24,5 +24,5 @@ This function counts the number of NA by variable in your data.frame
 }
 \examples{
 airquality \%>\%
-  mypdf1::pdf1_na()
+  mypdf1:::pdf1_na()
 }

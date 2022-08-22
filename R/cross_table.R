@@ -1,4 +1,4 @@
-#' pdf1_freq.tbl
+#' pdf1_cross_tbl
 #'
 #' @description
 #' `r lifecycle::badge("experimental")`
@@ -16,12 +16,13 @@
 
 #' @examples
 #' mtcars |>
-#'   mypdf1::pdf1_tbl_freq2(cyl, am, "title", marg = TRUE)
+#'   mypdf1::pdf1_cross_tbl(cyl, am, "title", marg = TRUE)
 #'
 #' @return A knitr_kable with 2x2 table fitted
 #'
 #' @export
-pdf1_tbl_freq2 <- function(obj, var1, var2, title = "", marg = F) {
+#'
+pdf1_cross_tbl <- function(obj, var1, var2, title = "", marg = F) {
   if (any(is.na(obj |> dplyr::select({{ var1 }}, {{ var2 }}))) == TRUE) {
     warning("Your dataframe has NA, they will be removed from calculations")
   }

@@ -17,7 +17,6 @@
 #'   mypdf1::pdf1_na()
 #' @return A tibble with n rows where n is equal to `ncol(obj)` and 2 columns
 #'
-#' @export
 pdf1_na <- function(obj, ...) {
   lifecycle::deprecate_soft(
     when = "0.6",

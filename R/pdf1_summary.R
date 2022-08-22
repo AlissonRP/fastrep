@@ -2,6 +2,7 @@
 #'
 #' In the base R we have the function summary, but the output is no by default
 #' a `data.frame`, so `pdf1_summary` is an enhancement of this function
+#' to summarize data frames.
 #'
 #'
 #' @param obj     Object used to create the table.

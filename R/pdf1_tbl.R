@@ -11,9 +11,9 @@
 #' (or object coercible by `as.data.frame` to a `data.frame`)
 #' @param title     Title for the table, write in string format
 #' @param format  Format of table, write in string format. Possible values are `"latex"`, "`html`".
-#' @param code  If you want the table code to appear in the console, put `code=TRUE`, you can combine with `format`.
-#' @param tabs  If you want row separator inside table, put `tabs=FALSE`.
-#' @param full_page  If you want the table not to take up the full width of the page, put `full_page=FALSE`.
+#' @param code  If you want the table code to appear in the console, put `code = TRUE`, you can combine with `format`.
+#' @param tabs  If you want a row separator inside table, put `tabs = FALSE`.
+#' @param full_page  If you want the table not to take up the full width of the page, put `full_page = FALSE`.
 #' @param ...     Other arguments
 #' @note Remember that by default the format is `"html"`
 #'

@@ -1,7 +1,7 @@
 Type: Package
 Package: mypdf1
 Title: mypdf1
-Version: 0.6
+Version: 0.7
 Author: Alisson Rosa
 Maintainer: The package maintainer <alirperera887@gmail.com>
 Description: Time-saving package for creating pdf reports in Rmarkdown.

@@ -7,7 +7,7 @@
 #' This function makes cross tables, like all functions from mypdf1
 #' you need to supply a data.frame, and in this case two variables.
 #'
-#' @param obj     Object used to create the table. Data frame, list or environment
+#' @param obj     Object used to create the table. Data frame, list, or environment
 #' (or object coercible by as.data.frame to a data frame)
 #' @param title     title for the table, write in string format
 #' @param var1       Variable that you want the table (not written in string format)

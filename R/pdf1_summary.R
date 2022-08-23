@@ -6,7 +6,6 @@
 #'
 #'
 #' @param obj     Object used to create the table.
-#'
 #' `data.frame`, `list` or environment
 #' (or object coercible by `as.data.frame` to a `data.frame`)
 #'

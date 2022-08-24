@@ -3,7 +3,7 @@ Package: mypdf1
 Title: mypdf1
 Version: 0.7
 Author: Alisson Rosa
-Maintainer: Alisson Rosa <alirperera887@gmail.com>
+Maintainer: Alisson Rosa <alirpereira887@gmail.com>
 Description: Time-saving package for creating reports in R.
 License: GPL
 Depends: 

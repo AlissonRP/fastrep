@@ -33,7 +33,7 @@ This function creates a frequency table, you only need to supply a
 data.frame and the variable to make the table.
 }
 \note{
-By default the \code{sort_by} is in alphabetical order of \code{{{ var }}}
+By default the \code{sort_by} is in alphabetical order of  \code{var}
 }
 \examples{
 iris \%>\%

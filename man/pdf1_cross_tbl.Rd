@@ -7,7 +7,7 @@
 pdf1_cross_tbl(obj, var1, var2, title = "", marg = F)
 }
 \arguments{
-\item{obj}{Object used to create the table. Data frame, list or environment
+\item{obj}{Object used to create the table. Data frame, list, or environment
 (or object coercible by as.data.frame to a data frame)}
 
 \item{var1}{Variable that you want the table (not written in string format)}

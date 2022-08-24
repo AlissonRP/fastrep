@@ -2,6 +2,7 @@
 
 export("%>%")
 export(as_tabyl)
+export(pdf1_citation)
 export(pdf1_cross_tbl)
 export(pdf1_freq_tbl)
 export(pdf1_summary)

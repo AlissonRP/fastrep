@@ -8,7 +8,6 @@ pdf1_summary(obj, na_rm = TRUE)
 }
 \arguments{
 \item{obj}{Object used to create the table.
-
 \code{data.frame}, \code{list} or environment
 (or object coercible by \code{as.data.frame} to a \code{data.frame})}
 

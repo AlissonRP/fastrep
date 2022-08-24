@@ -1,6 +1,6 @@
 Type: Package
 Package: mypdf1
-Title: mypdf1
+Title: Creating reports fast in R
 Version: 0.7
 Author: Alisson Rosa
 Maintainer: Alisson Rosa <alirpereira887@gmail.com>

@@ -19,7 +19,7 @@
 #'
 #' @export
 pdf1_freq_tbl <- function(obj, var,
-                          sort_by = {{ var }}, desc = F)
+                          sort_by = {{ var }}, desc = FALSE)
 {
   non_order <- obj %>%
     dplyr::count({{ var }}) %>%

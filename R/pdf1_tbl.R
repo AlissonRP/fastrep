@@ -35,9 +35,9 @@
 #'
 #' @return Your object of input in the format of a knitr_kable
 #' @export
-pdf1_tbl <- function(obj, title = "", format = NULL, code = F, tabs = F,
-                     full_page = T, ...) {
-  if (code == T) {
+pdf1_tbl <- function(obj, title = "", format = NULL, code = FALSE, tabs = FALSE,
+                     full_page = TRUE, ...) {
+  if (code == TRUE) {
     obj %>%
       kableExtra::kable(caption = title, align = "c", format = format,
                         booktabs = !tabs)

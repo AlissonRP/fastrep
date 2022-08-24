@@ -8,9 +8,9 @@ pdf1_tbl(
   obj,
   title = "",
   format = NULL,
-  code = F,
-  tabs = F,
-  full_page = T,
+  code = FALSE,
+  tabs = FALSE,
+  full_page = TRUE,
   ...
 )
 }

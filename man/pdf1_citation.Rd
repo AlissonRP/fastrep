@@ -7,6 +7,9 @@ How to cite \code{mypdf1} in your publications!}
 \usage{
 pdf1_citation()
 }
+\value{
+A print in console indicating how to cite the package.
+}
 \description{
 citation
 How to cite \code{mypdf1} in your publications!

@@ -12,7 +12,7 @@ pdf1_freq_tbl(
          var
      }
  },
-  desc = F
+  desc = FALSE
 )
 }
 \arguments{

@@ -22,7 +22,7 @@
 #'
 #' @export
 #'
-pdf1_cross_tbl <- function(obj, var1, var2, title = "", marg = F) {
+pdf1_cross_tbl <- function(obj, var1, var2, title = "", marg = FALSE) {
   if (any(is.na(obj |> dplyr::select({{ var1 }}, {{ var2 }}))) == TRUE) {
     warning("Your dataframe has NA, they will be removed from calculations")
   }

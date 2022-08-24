@@ -4,7 +4,7 @@
 \alias{pdf1_cross_tbl}
 \title{pdf1_cross_tbl}
 \usage{
-pdf1_cross_tbl(obj, var1, var2, title = "", marg = F)
+pdf1_cross_tbl(obj, var1, var2, title = "", marg = FALSE)
 }
 \arguments{
 \item{obj}{Object used to create the table. Data frame, list, or environment

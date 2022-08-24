@@ -36,7 +36,7 @@ As you can see the only parameters is `df`, you can put  a title in the table us
 
 ```{r}
 df |> 
-  mypdf1::pdf1_tbl(title = "My Title!")
+  mypdf1::pdf1_tbl(title = "My Title!", full_page = F)
 ```
 The value of format will be automatically determined if the function is called within a knitr document, but in your section, the default format is `html`, if you want to change just use the argument `format` which the possibles values are `html` or `latex`. If you want the code that generates the table you can use the argument `code`. 
 ```{r}
@@ -44,6 +44,9 @@ df |>
   mypdf1::pdf1_tbl(title = "My Title!", code = T, format = "latex")
 ```
 
+You can choose if you want rows separating the cells in the table 
+(LaTeX version), using 
+`tabs = TRUE` 
 
 ## `pdf1_freq_tbl`
 This function creates a frequency table, you only need to supply a `data.frame` and the variable to make the table.
@@ -86,20 +89,14 @@ The second variable (`var2`) is on the top of the table, if you want the margina
 infert |> 
   mypdf1::pdf1_cross_tbl(education, spontaneous, marg = T)
 ```
-## `pdf1_na`
-This function counts the number of `NA` by variable in your `data.frame`
 
-```{r}
-x = c(1,2,NA,NA,NA)
-y = c(NA,1:4)
-
-data.frame(x,y) |> 
-  mypdf1:::pdf1_na()
-```
 
 
 ## `pdf1_summary`
-In the base R we have the function `summary`, but the output is no by default a `data.frame`, so `pdf1_summary` is a rewrite.
+In the base R we have the function summary, but the output is no by default
+a `data.frame`, so `pdf1_summary` is an enhancement of this function
+to summarize data frames.
+
 
 ```{r}
 mtcars |> 

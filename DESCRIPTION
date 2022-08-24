@@ -1,10 +1,13 @@
 Type: Package
 Package: mypdf1
-Title: Creating reports fast in R
+Title:  Time-Saving Package for Creating Reports
 Version: 0.7
-Author: Alisson Rosa
+Authors@R: 
+    c(person("Alisson", "Rosa", role = c("aut", "cre"),
+    email = "alirpereira887@gmail.com"))
 Maintainer: Alisson Rosa <alirpereira887@gmail.com>
-Description: Time-saving package for creating reports in R.
+Description: This package provides  templates for pdf reports in Rmarkdown and 
+    quite usual functions.
 License: GPL
 Depends: 
     R (>= 4.1.0)

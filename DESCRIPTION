@@ -6,8 +6,8 @@ Authors@R:
     c(person("Alisson", "Rosa", role = c("aut", "cre"),
     email = "alirpereira887@gmail.com"))
 Maintainer: Alisson Rosa <alirpereira887@gmail.com>
-Description: This package provides  templates for pdf reports in Rmarkdown and 
-    quite usual functions.
+Description: Provides  templates for pdf reports in Rmarkdown and 
+     functions to create tables and summaries of data.
 License: GPL
 Depends: 
     R (>= 4.1.0)

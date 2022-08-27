@@ -18,9 +18,6 @@ tab(obj, var1, var2)
 A tibble to create \code{pdf1_cross_tbl}
 }
 \description{
-tab
-}
-\details{
 This function is used to create \code{pdf1_cross_tbl}
 }
 \examples{

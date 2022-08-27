@@ -1,12 +1,10 @@
 #' tab
 #'
 #'
-#'
 #' This function is used to create `pdf1_cross_tbl`
 #'
 #' @param obj     Object used to create the table. Data frame, list, or environment
 #' (or object coercible by as.data.frame to a data frame)
-
 #' @param var1       Variable that you want the table (not written in string format)
 #' @param var2       Variable that you want on the top of the table (not written in string format)
 #' @examples

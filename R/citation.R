@@ -5,7 +5,7 @@
 pdf1_citation = function(){
   cat(paste("To cite mypdf1 in publications use in your BibTeX: \n","\n",
             "@Manual{pdf1,
-  title = {mypdf1: mypdf1},
+  title = {mypdf1: Time-Saving Package for Creating Reports},
   author = {Alisson Rosa},
   year = {2022},
   note = {R package version 0.7},

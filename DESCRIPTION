@@ -6,7 +6,7 @@ Authors@R:
     c(person("Alisson", "Rosa", role = c("aut", "cre"),
     email = "alirpereira887@gmail.com"))
 Maintainer: Alisson Rosa <alirpereira887@gmail.com>
-Description: Provides  templates for pdf reports in `rmarkdown` and 
+Description: Provides  templates for pdf reports in 'rmarkdown' and 
      functions to create tables and summaries of data.
 License: GPL
 Depends: 

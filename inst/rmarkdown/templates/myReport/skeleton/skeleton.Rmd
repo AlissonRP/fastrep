@@ -38,7 +38,7 @@ iris |>
 ```{r crftable}
 
 iris |>  
-fastrep::tbl_freq(Species) |> 
+fastrep::freq_tbl(Species) |> 
   fastrep::tbl("You can combine this function too!")
     
 ```

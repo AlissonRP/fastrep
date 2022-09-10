@@ -1,4 +1,4 @@
-#' pdf1_na
+#' rep_na
 #'
 #'
 #'
@@ -14,10 +14,10 @@
 #' @param ...     Other arguments
 #' @examples
 #' airquality %>%
-#'   mypdf1::pdf1_na()
+#'   fastrep::rep_na()
 #' @return A tibble with n rows where n is equal to `ncol(obj)` and 2 columns
 #' @export
-pdf1_na <- function(obj, ...) {
+rep_na <- function(obj, ...) {
   lifecycle::deprecate_soft(
     when = "0.6",
     what = "pdf1_na()",

@@ -1,6 +1,6 @@
-#' pdf1_tbl
+#' tbl
 #'
-#' This is the primary function of mypdf1, with her you can make tables in HTML or LaTeX format,
+#' This is the primary function of fastrep, with her you can make tables in HTML or LaTeX format,
 #' the main idea is to provide minimal parameters to create their own table,
 #' so you necessarily only need to provide a data.frame
 #'
@@ -26,16 +26,16 @@
 #' iris %>%
 #'   dplyr::group_by(Species) %>%
 #'   dplyr::summarise(mean = mean(Sepal.Length)) %>%
-#'   mypdf1::pdf1_tbl("THIS FUNCTION IS SO INCREDIBLE!")
+#'   fastrep::tbl("THIS FUNCTION IS SO INCREDIBLE!")
 #'
 #' mtcars |>
 #'   dplyr::group_by(carb) |>
 #'   dplyr::summarise(sd = sd(wt)) |>
-#'   mypdf1::pdf1_tbl()
+#'   fastrep::tbl()
 #'
 #' @return Your object of input in the format of a knitr_kable
 #' @export
-pdf1_tbl <- function(obj, title = "", format = NULL, code = FALSE, tabs = FALSE,
+tbl <- function(obj, title = "", format = NULL, code = FALSE, tabs = FALSE,
                      full_page = TRUE, ...) {
   if (code == TRUE) {
     obj %>%
@@ -45,6 +45,7 @@ pdf1_tbl <- function(obj, title = "", format = NULL, code = FALSE, tabs = FALSE,
     obj %>%
       kableExtra::kable(caption = title, align = "c", format = format,
                         booktabs = !tabs) |>
-      kableExtra::kable_classic(latex_options = "HOLD_position", full_width = full_page, ...)
+      kableExtra::kable_classic(latex_options = "HOLD_position",
+                                full_width = full_page, ...)
   }
 }

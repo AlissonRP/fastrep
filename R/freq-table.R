@@ -1,4 +1,4 @@
-#' pdf1_freq_tbl
+#' freq_tbl
 #'
 #' This function creates a frequency table, you only need to supply a
 #' data.frame and the variable to make the table.
@@ -12,13 +12,13 @@
 #' @note By default the `sort_by` is in alphabetical order of  `var`
 #' @examples
 #' iris %>%
-#'   mypdf1::pdf1_freq_tbl(Species) %>%
-#'   mypdf1::pdf1_tbl("You can combine this function too!")
+#'   fastrep::freq_tbl(Species) %>%
+#'   fastrep::tbl("You can combine this function too!")
 #'
 #' @return A tibble with 4 rows and 3 columns
 #'
 #' @export
-pdf1_freq_tbl <- function(obj, var,
+freq_tbl <- function(obj, var,
                           sort_by = {{ var }}, desc = FALSE)
 {
   non_order <- obj %>%

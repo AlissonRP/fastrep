@@ -1,4 +1,4 @@
-# mypdf1 <img src='man/figures/fig/mypdf1.png' align="right" height="130" /></a>
+# mypdf1 <img src='man/figures/fig/Rep.png' align="right" height="130" /></a>
 
 [![R build
 status](https://github.com/tidyverse/ggplot2/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/mypdf1/actions)

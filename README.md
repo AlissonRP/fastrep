@@ -1,7 +1,7 @@
 # fastrep <img src='man/figures/fig/Rep.png' align="right" height="130" /></a>
 
 [![R build
-status](https://github.com/tidyverse/ggplot2/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/mypdf1/actions)
+status](https://github.com/tidyverse/ggplot2/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/fastrep/actions)
 [![Codecov 
 test coverage](https://codecov.io/gh/AlissonRP/mypdf1/branch/main/graph/badge.svg)](https://app.codecov.io/gh/AlissonRP/mypdf1?branch=main)
 

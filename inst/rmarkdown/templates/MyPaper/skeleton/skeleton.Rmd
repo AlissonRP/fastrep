@@ -40,14 +40,14 @@ scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette = "Set2")
 ```{r }
 #R code
 iris |> 
-  mypdf1::pdf1_summary()
+  fastrep::describe()
   
 ```
 ```{r crftable}
 
 iris |>  
-mypdf1::pdf1_tbl_freq(Species) |> 
-  mypdf1::pdf1_tbl("You can combine this function too!")
+fastrep::tbl_freq(Species) |> 
+  fastrep::tbl("You can combine this function too!")
     
 ```
 You cross-reference tables like this: Table \@ref(tab:crftable)

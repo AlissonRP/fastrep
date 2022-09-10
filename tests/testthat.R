@@ -1,4 +1,4 @@
 library(testthat)
-library(mypdf1)
+library(fastrep)
 
-test_check("mypdf1")
+test_check("fastrep")

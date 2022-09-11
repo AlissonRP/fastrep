@@ -3,13 +3,13 @@
 [![R build
 status](https://github.com/tidyverse/ggplot2/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/fastrep/actions)
 [![Codecov 
-test coverage](https://codecov.io/gh/AlissonRP/mypdf1/branch/main/graph/badge.svg)](https://app.codecov.io/gh/AlissonRP/mypdf1?branch=main)
+test coverage](https://codecov.io/gh/AlissonRP/fastrep/branch/main/graph/badge.svg)](https://app.codecov.io/gh/AlissonRP/fastrep?branch=main)
 
 
 
 # Documentation
 
-You can consult the documentation [here](https://alissonrp.github.io/mypdf1/)
+You can consult the documentation [here](https://alissonrp.github.io/fastrep/)
 
 
 ## Overview

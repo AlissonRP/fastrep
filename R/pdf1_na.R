@@ -20,8 +20,8 @@
 rep_na <- function(obj, ...) {
   lifecycle::deprecate_soft(
     when = "0.6",
-    what = "pdf1_na()",
-    details = "Use pdf1_summary instead"
+    what = "rep_na()",
+    details = "Use describe instead"
   )
   vec <- is.na(obj) |>
     as.data.frame() |>

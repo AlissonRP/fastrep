@@ -5,7 +5,7 @@ Version: 0.7
 Authors@R: 
     c(person("Alisson", "Rosa", role = c("aut", "cre"),
     email = "alirpereira887@gmail.com"))
-Description: Provides  templates for reports in `rmarkdown` and 
+Description: Provides  templates for reports in 'rmarkdown' and 
      functions to create tables and summaries of data.
 License: GPL
 Depends: 

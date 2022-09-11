@@ -1,5 +1,5 @@
 ---
-title: "Introduction to mypdf1"
+title: "Introduction to fastrep"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{my-vignette}
@@ -20,8 +20,8 @@ knitr::opts_chunk$set(
 # Overview
 The objective of this package is to facilitate producing reports using Rmarkdown, so the functions are of that type that you "you always have to use, but you always have to create".
 
-## The core function : `pdf1_tbl`
-This is the main function of `mypdf1`, with her you can make tables in `HTML` or `latex` format, the main idea is to provide minimal parameters to create their own table, so you just need to provide a `data.frame`. 
+## The core function : `tbl`
+This is the main function of `fastrep`, with her you can make tables in `HTML` or `latex` format, the main idea is to provide minimal parameters to create their own table, so you just need to provide a `data.frame`. 
 
 ```{r}
 df = Orange |> 
@@ -29,85 +29,85 @@ df = Orange |>
   dplyr::count() 
   
   
-mypdf1::pdf1_tbl(df)
+fastrep::tbl(df)
 ```
 As you can see the only parameters is `df`, you can put  a title in the table using
 `title`
 
 ```{r}
 df |> 
-  mypdf1::pdf1_tbl(title = "My Title!", full_page = F)
+  fastrep::tbl(title = "My Title!", full_page = F)
 ```
 The value of format will be automatically determined if the function is called within a knitr document, but in your section, the default format is `html`, if you want to change just use the argument `format` which the possibles values are `html` or `latex`. If you want the code that generates the table you can use the argument `code`. 
 ```{r}
 df |> 
-  mypdf1::pdf1_tbl(title = "My Title!", code = T, format = "latex")
+  fastrep::tbl(title = "My Title!", code = T, format = "latex")
 ```
 
 You can choose if you want rows separating the cells in the table 
 (LaTeX version), using 
 `tabs = TRUE` 
 
-## `pdf1_freq_tbl`
+## `freq_tbl`
 This function creates a frequency table, you only need to supply a `data.frame` and the variable to make the table.
 
 ```{r}
 infert |> 
-  mypdf1::pdf1_freq_tbl(education)
+  fastrep::freq_tbl(education)
 ```
-If you want to generate a table using the output, just combine it with `pdf1_tbl`
+If you want to generate a table using the output, just combine it with `tbl`
 
 
 ```{r}
 infert |> 
-  mypdf1::pdf1_freq_tbl(education) |> 
-  mypdf1::pdf1_tbl()
+  fastrep::freq_tbl(education) |> 
+  fastrep::tbl()
 ```
 You can order the output using `sort_by`, which has two options: `absolute_frequency` and `relative_frequency`.
 
 ```{r}
 chickwts |> 
-  mypdf1::pdf1_freq_tbl(feed, sort_by = absolute_frequency)
+  fastrep::freq_tbl(feed, sort_by = absolute_frequency)
 ```
 And if you want decreasing order put `desc = T`
 ```{r}
 chickwts |> 
-  mypdf1::pdf1_freq_tbl(feed, desc = T, sort_by = relative_frequency)
+  fastrep::freq_tbl(feed, desc = T, sort_by = relative_frequency)
 ```
 
 
 
-## `pdf1_cross_tbl`
-This function makes cross tables, like all functions from `mypdf1` you need to supply a `data.frame`, and in this case two variables.
+## `cross_tbl`
+This function makes cross tables, like all functions from `fastrep` you need to supply a `data.frame`, and in this case two variables.
 ```{r}
 infert |> 
-  mypdf1::pdf1_cross_tbl(education, spontaneous)
+  fastrep::cross_tbl(education, spontaneous)
 ```
 The second variable (`var2`) is on the top of the table, if you want the marginal row table use `marg = TRUE`.
 
 ```{r}
 infert |> 
-  mypdf1::pdf1_cross_tbl(education, spontaneous, marg = T)
+  fastrep::cross_tbl(education, spontaneous, marg = T)
 ```
 
 
 
-## `pdf1_summary`
+## `describe`
 In the base R we have the function summary, but the output is no by default
-a `data.frame`, so `pdf1_summary` is an enhancement of this function
+a `data.frame`, so `describe` is an enhancement of this function
 to summarize data frames.
 
 
 ```{r}
 mtcars |> 
-  mypdf1::pdf1_summary()
+  fastrep::describe()
 ```
 
-As you've probably noticed, the output is a `tibble`, so you can combine with `pdf1_tbl`
+As you've probably noticed, the output is a `tibble`, so you can combine with `tbl`
 
 ```{r}
 mtcars |> 
-  mypdf1::pdf1_summary() |> 
-  mypdf1::pdf1_tbl("Summary of mtcars")
+  fastrep::describe() |> 
+  fastrep::tbl("Summary of mtcars")
 ```
 

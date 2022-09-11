@@ -1,7 +1,7 @@
-#' pdf1_summary()
+#' describe
 #'
 #' In the base R we have the function summary, but the output is no by default
-#' a `data.frame`, so `pdf1_summary` is an enhancement of this function
+#' a `data.frame`, so `describe` is an enhancement of this function
 #' to summarize data frames.
 #'
 #'
@@ -13,18 +13,18 @@
 
 #' @examples
 #' mtcars |>
-#'   mypdf1::pdf1_summary()
+#'   fastrep::describe()
 #'
-#' airquality |> mypdf1::pdf1_summary(na_rm = FALSE)
+#' airquality |> fastrep::describe(na_rm = FALSE)
 #'
-#' iris |> mypdf1::pdf1_summary()
+#' iris |> fastrep::describe()
 #'
 #' @return A tibble with n rows where n is equal to `ncol(obj)` and  columns
 #' with
 #' the summary metrics
 #'
 #' @export
-pdf1_summary <- function(obj, na_rm = TRUE) {
+describe <- function(obj, na_rm = TRUE) {
   not_numeric <- obj |>
     dplyr::select(where(purrr::negate(is.numeric))) |>
     ncol()
@@ -50,5 +50,5 @@ pdf1_summary <- function(obj, na_rm = TRUE) {
     dplyr::bind_cols(results |>
       dplyr::select(where(is.numeric)) |>
       purrr::map_df(round, 3)) |>
-    dplyr::bind_cols(pdf1_na(obj) |> dplyr::select(where(is.numeric)))
+    dplyr::bind_cols(rep_na(obj) |> dplyr::select(where(is.numeric)))
 }

@@ -15,13 +15,13 @@ tab(obj, var1, var2)
 \item{var2}{Variable that you want on the top of the table (not written in string format)}
 }
 \value{
-A tibble to create \code{pdf1_cross_tbl}
+A tibble to create \code{cross_tbl}
 }
 \description{
-This function is used to create \code{pdf1_cross_tbl}
+This function is used to create \code{cross_tbl}
 }
 \examples{
 mtcars |>
-  mypdf1::pdf1_cross_tbl(cyl, am)
+  fastrep::cross_tbl(cyl, am)
 
 }

@@ -1,4 +1,4 @@
-library(mypdf1)
+library(fastrep)
 
 col0 <- mtcars |>
   tab(cyl, am) |>
@@ -24,5 +24,3 @@ test_that("tab testes", {
 })
 
 
-mtcars |>
-  tab(cyl, am)

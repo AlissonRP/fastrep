@@ -1,10 +1,10 @@
-#' pdf1_cross_tbl
+#' cross_tbl
 #'
 #' @description
 #' `r lifecycle::badge("experimental")`
 #'
 #'
-#' This function makes cross tables, like all functions from mypdf1
+#' This function makes cross tables, like all functions from fastrep
 #' you need to supply a data.frame, and in this case two variables.
 #'
 #' @param obj     Object used to create the table. Data frame, list, or environment
@@ -16,13 +16,13 @@
 
 #' @examples
 #' mtcars |>
-#'   mypdf1::pdf1_cross_tbl(cyl, am, "title", marg = TRUE)
+#'   fastrep::cross_tbl(cyl, am, "title", marg = TRUE)
 #'
 #' @return A knitr_kable with 2x2 table fitted
 #'
 #' @export
 #'
-pdf1_cross_tbl <- function(obj, var1, var2, title = "", marg = FALSE) {
+cross_tbl <- function(obj, var1, var2, title = "", marg = FALSE) {
   if (any(is.na(obj |> dplyr::select({{ var1 }}, {{ var2 }}))) == TRUE) {
     warning("Your dataframe has NA, they will be removed from calculations")
   }
@@ -39,7 +39,7 @@ pdf1_cross_tbl <- function(obj, var1, var2, title = "", marg = FALSE) {
       janitor::adorn_totals("row") %>%
       janitor::adorn_totals("col") %>%
       dplyr::ungroup() |>
-      mypdf1::pdf1_tbl(title) |>
+      fastrep::tbl(title) |>
       kableExtra::add_header_above(c(" ", setNames(catlev, title2)), align = "c")
   } else {
     title2 <- obj |>
@@ -50,7 +50,7 @@ pdf1_cross_tbl <- function(obj, var1, var2, title = "", marg = FALSE) {
     tab <- tab |>
       janitor::adorn_percentages() %>%
       dplyr::ungroup() |>
-      mypdf1::pdf1_tbl(title) |>
+      fastrep::tbl(title) |>
       kableExtra::add_header_above(c(" ", setNames(catlev, title2)), align = "c")
   }
   tab

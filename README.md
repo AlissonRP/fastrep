@@ -1,15 +1,15 @@
-# mypdf1 <img src='man/figures/fig/mypdf1.png' align="right" height="130" /></a>
+# fastrep <img src='man/figures/fig/Rep.png' align="right" height="130" /></a>
 
 [![R build
-status](https://github.com/tidyverse/ggplot2/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/mypdf1/actions)
+status](https://github.com/tidyverse/ggplot2/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/fastrep/actions)
 [![Codecov 
-test coverage](https://codecov.io/gh/AlissonRP/mypdf1/branch/main/graph/badge.svg)](https://app.codecov.io/gh/AlissonRP/mypdf1?branch=main)
+test coverage](https://codecov.io/gh/AlissonRP/fastrep/branch/main/graph/badge.svg)](https://app.codecov.io/gh/AlissonRP/fastrep?branch=main)
 
 
 
 # Documentation
 
-You can consult the documentation [here](https://alissonrp.github.io/mypdf1/)
+You can consult the documentation [here](https://alissonrp.github.io/fastrep/)
 
 
 ## Overview
@@ -18,11 +18,11 @@ So this package provides a template for pdf reports in Rmarkdown and quite usual
 
 ## Installation
 ```r
-devtools::install_github("https://github.com/AlissonRP/mypdf1")
+devtools::install_github("https://github.com/AlissonRP/fastrep")
 ```
 
 ```r
-remotes::install_github("https://github.com/AlissonRP/mypdf1")
+remotes::install_github("https://github.com/AlissonRP/fastrep")
 ```
 ### Recommendation
 To generate a pdf in Rmarkdown is recommended to use [`tinytex`](https://cran.r-project.org/package=tinytex). If you don't have, use:
@@ -33,16 +33,16 @@ tinytex::install_tinytex()
 
 ## Use of default template
 ```r
-rmarkdown::draft("namefile.Rmd", template = "pdf1", package = "mypdf1")
+rmarkdown::draft("namefile.Rmd", template = "fast_report", package = "fastrep")
 ```
 ## Use of paper template
 
 ```r
-rmarkdown::draft("namefile.Rmd", template = "pdf1-paper", package = "mypdf1", create_dir = FALSE)
+rmarkdown::draft("namefile.Rmd", template = "fast_paper", package = "fastrep", create_dir = FALSE)
 ```
 
 ## Functions available
-* `pdf1_tbl`: This function is used to generate tables
-* `pdf1_freq_tbl`: This function assists in creating frequency tables (`tibble`) 
-* `pdf1_cross_tbl`: 2x2 table, values can be absolute or marginal rows using argument `marg = TRUE`
-* `pdf1_summary`: Summarize the `data.frame` outputting a `tibble`
+* `tbl`: This function is used to generate tables
+* `freq_tbl`: This function assists in creating frequency tables (`tibble`) 
+* `cross_tbl`: 2x2 table, values can be absolute or marginal rows using argument `marg = TRUE`
+* `describe`: Summarize the `data.frame` outputting a `tibble`

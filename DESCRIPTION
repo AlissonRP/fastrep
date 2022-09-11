@@ -1,12 +1,11 @@
 Type: Package
-Package: mypdf1
+Package: fastrep
 Title:  Time-Saving Package for Creating Reports
 Version: 0.7
 Authors@R: 
     c(person("Alisson", "Rosa", role = c("aut", "cre"),
     email = "alirpereira887@gmail.com"))
-Maintainer: Alisson Rosa <alirpereira887@gmail.com>
-Description: Provides  templates for pdf reports in 'rmarkdown' and 
+Description: Provides  templates for reports in 'rmarkdown' and 
      functions to create tables and summaries of data.
 License: GPL
 Depends: 
@@ -32,4 +31,4 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
-BugReports: https://github.com/AlissonRP/mypdf1/issues
+BugReports: https://github.com/AlissonRP/fastrep/issues

@@ -1,4 +1,4 @@
-# fastrep <img src='man/figures/fig/Rep.png' align="right" height="130" /></a>
+# fastrep <img src='man/figures/fig/Rep1.png' align="right" height="130" /></a>
 
 [![R build
 status](https://github.com/tidyverse/ggplot2/workflows/R-CMD-check/badge.svg)](https://github.com/AlissonRP/fastrep/actions)
@@ -16,14 +16,19 @@ You can consult the documentation [here](https://alissonrp.github.io/fastrep/)
 Whenever I created a file in Rmarkdown, there was a pattern of necessary packages and functions that I almost always used.  
 So this package provides a template for pdf reports in Rmarkdown and quite usual functions, note that it is a package more *aggregator* than creator.   
 
+
+
 ## Installation
+
+```r
+install.packages("fastrep")
+```
+
+
 ```r
 devtools::install_github("https://github.com/AlissonRP/fastrep")
 ```
 
-```r
-remotes::install_github("https://github.com/AlissonRP/fastrep")
-```
 ### Recommendation
 To generate a pdf in Rmarkdown is recommended to use [`tinytex`](https://cran.r-project.org/package=tinytex). If you don't have, use:
 

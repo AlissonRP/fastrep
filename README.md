@@ -9,7 +9,7 @@ test coverage](https://codecov.io/gh/AlissonRP/fastrep/branch/main/graph/badge.s
 
 # Documentation
 
-You can consult the documentation [here](https://alissonrp.github.io/fastrep/)
+You can consult the documentation [here](https://cran.r-project.org/web/packages/fastrep/vignettes/my-vignette.html)
 
 
 ## Overview
